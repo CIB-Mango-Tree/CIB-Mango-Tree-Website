@@ -5,9 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CIB Mango Tree</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./docs/css/styles.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>CIB Mango Tree</h1>
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CIB Mango Tree</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Data Scraping</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Generic Tests</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+    <div class="container-fluid p-5">
+      <div class="row">
+        <div class="col">
+          <div class="display-5">CIB Mango Tree</div>
+          <div class="fw-light">A Civic Tech DC Project</div>
+        </div>
+      </div>
+      <div id="homepage-hero" class="row p-5">
+        <div class="d-flex align-items-start">
+          <div class="nav flex-column nav-pills me-3 col-3 card card-body" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">About</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Data Scraping</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Generic Tests</button>
+          </div>
+          <div class="tab-content col-9" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+              <div id="hero-about-text" class="card card-body">
+                <div class="display-3">About</div>
+                <span> 
+                  Welcome to the CIB Mango Tree, a collaborative and open-source project to compile software that tests for <a href="https://about.fb.com/news/2018/12/inside-feed-coordinated-inauthentic-behavior/">coordinated inauthentic behavior</a> (CIB) in datasets of online activity. A project of <a href="https://www.civictechdc.org/">Civic Tech DC</a>, our mission is to share methods to uncover how disruptive actors seek to hack our legitimate online discourse regarding health, politics, and society. 
+                  <br>
+                  The CIB Mango Tree presents the most simple tests for CIB first – the low-hanging fruit. These tests are easy to run and interpret. They will reveal signs of unsophisticated CIB. As you move up the Mango Tree, tests become harder and scavenge for high-hanging fruit. 
+                </span>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+              <div id="approach-section" class="row">
+                <div class="col-12 card card-body">
+                  <h1 class="display-3">Data Scraping</h1>
+                  <div>
+                    <span>
+                      The CIB Mango Tree does not provide software for scraping social media activity. It yields standardized tests to analyze CIB in data that researchers have already scraped. Data can be scraped manually from websites using custom-built scrapers, or via APIs that correspond to major social media platforms. Some skill is required to scrape and clean data well. 
+                    The CIB Mango Tree provides generic tests for CIB. Generic tests can be applied on datasets of online activity from a variety of social media and news sites. CIB Mango Tree tests are optimized for data housed in CSV files, and assumes that CIB can be detected by analyzing a variety of parameters that datasets of online activity will likely have. 
+                    </span>
+                  </div>
+                  <hr>
+                  <div>
+                    <span>
+                      <b>Parameters include:</b>
+                    </span>
+                    <ul>
+                      <li>Unique Post Number (UPN) = a unique number applied to every scraped post/comment</li>
+                      <li>Unique Post Username = the unique username of the account that made the post/comment</li>
+                      <li>Post Time/Date = the time and date that an individual post/comment was made</li>
+                      <li>Post Content = the written content of an individual post/comment</li>        
+                    </ul>
+                    <span>
+                      CIB Mango Tree tests will use some or all of the available parameters to search for signs of coordinated inauthentic behavior. 
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+              <div id="tests-section" class="row">
+                <div class="col-12 card card-body">
+                  <h1 class="display-3">Generic Tests</h1>
+                  <div class="row row-cols-1 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title fw-semibold">
+                            Test #1: Copy Pasta
+                            <span class="badge text-bg-secondary">Low-Hanging Fruit</span>
+                          </div>
+                          <form class ="row g-1">
+                            <div class="col-3">
+                              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="UPN">
+                            </div>
+                            <div class="col-4">
+                              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Unique Post Username">
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" id="exampleCheck1" placeholder="Post Content">
+                            </div>
+                            <button type="submit" class="btn btn-primary col-2">Submit</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title fw-semibold">
+                            Test #2: Coordinated Posting
+                            <span class="badge text-bg-secondary">Low-Hanging Fruit</span>
+                          </div>
+                          <form class ="row g-1">
+                            <div class="col-3">
+                              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="UPN">
+                            </div>
+                            <div class="col-4">
+                              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Unique Post Username">
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" id="exampleCheck1" placeholder="Post Time/Date">
+                            </div>
+                            <button type="submit" class="btn btn-primary col-2">Submit</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title fw-semibold">
+                            Test #3: Another Test
+                          </div>
+                          <div class="card-text">
+                            Parameters:
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
