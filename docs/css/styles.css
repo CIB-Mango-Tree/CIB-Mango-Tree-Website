@@ -1,7 +1,9 @@
 #homepage-hero{
-    background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0),white), url("../images/home-background.jpg");
-    height:80vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height:80vh;  
 }
 
+#page-container{
+    background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0),white), url("../images/home-background.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
