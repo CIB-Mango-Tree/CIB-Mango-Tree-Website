@@ -4,32 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CIB Mango Tree</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="./docs/css/styles.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link href="./docs/css/styles.css" rel="stylesheet"/>
   </head>
   <body>
-    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">CIB Mango Tree</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Data Scraping</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Generic Tests</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
-    <div class="container-fluid p-5">
+    <div id="page-container" class="container-fluid p-5">
       <div class="row">
         <div class="col">
           <div class="display-5">CIB Mango Tree</div>
@@ -39,48 +17,196 @@
       <div id="homepage-hero" class="row p-5">
         <div class="d-flex align-items-start">
           <div class="nav flex-column nav-pills me-3 col-3 card card-body" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">About</button>
-            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Data Scraping</button>
-            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Generic Tests</button>
+            <button class="nav-link active" id="v-pills-about-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about" type="button" role="tab" aria-controls="v-pills-about" aria-selected="true">About</button>
+            <button class="nav-link" id="v-pills-dataprep-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dataprep" type="button" role="tab" aria-controls="v-pills-dataprep" aria-selected="false">Data Preparation</button>
+            <button class="nav-link" id="v-pills-tests-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tests" type="button" role="tab" aria-controls="v-pills-tests" aria-selected="false">Generic Tests</button>
           </div>
-          <div class="tab-content col-9" id="v-pills-tabContent">
-            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+          <div class="tab-content col-9 mb-5" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel" aria-labelledby="v-pills-about-tab" tabindex="0">
               <div id="hero-about-text" class="card card-body">
                 <div class="display-3">About</div>
-                <span> 
-                  Welcome to the CIB Mango Tree, a collaborative and open-source project to compile software that tests for <a href="https://about.fb.com/news/2018/12/inside-feed-coordinated-inauthentic-behavior/">coordinated inauthentic behavior</a> (CIB) in datasets of online activity. A project of <a href="https://www.civictechdc.org/">Civic Tech DC</a>, our mission is to share methods to uncover how disruptive actors seek to hack our legitimate online discourse regarding health, politics, and society. 
-                  <br>
+                <span class="lead mb-2 fst-italic">  Welcome to the CIB Mango Tree, a collaborative and open-source project to compile software that tests for <a href="https://about.fb.com/news/2018/12/inside-feed-coordinated-inauthentic-behavior/">coordinated inauthentic behavior</a> (CIB) in datasets of online activity. </span>
+                <span>A project of <a href="https://www.civictechdc.org/">Civic Tech DC</a>, our mission is to share methods to uncover how disruptive actors seek to hack our legitimate online discourse regarding health, politics, and society. 
                   The CIB Mango Tree presents the most simple tests for CIB first – the low-hanging fruit. These tests are easy to run and interpret. They will reveal signs of unsophisticated CIB. As you move up the Mango Tree, tests become harder and scavenge for high-hanging fruit. 
                 </span>
               </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+            <div class="tab-pane fade" id="v-pills-dataprep" role="tabpanel" aria-labelledby="v-pills-dataprep-tab" tabindex="0">
               <div class="card card-body">
-                <h1 class="display-3">Data Scraping</h1>
+                <h1 class="display-3">Data Preparation</h1>
                 <div>
-                  <span>
-                    The CIB Mango Tree does not provide software for scraping social media activity. It yields standardized tests to analyze CIB in data that researchers have already scraped. Data can be scraped manually from websites using custom-built scrapers, or via APIs that correspond to major social media platforms. Some skill is required to scrape and clean data well. 
-                  The CIB Mango Tree provides generic tests for CIB. Generic tests can be applied on datasets of online activity from a variety of social media and news sites. CIB Mango Tree tests are optimized for data housed in CSV files, and assumes that CIB can be detected by analyzing a variety of parameters that datasets of online activity will likely have. 
-                  </span>
+                  <div class="lead mb-2 fst-italic">The CIB Mango Tree does not provide software for scraping social media activity - it yields standardized tests to analyze CIB in data that researchers have already scraped.</div> 
+                  <div class="mb-2">Data can be scraped manually from websites using <a href="https://realpython.com/python-web-scraping-practical-introduction/">custom-built scrapers</a>, or via <a href="https://www.ayrshare.com/top-10-social-media-apis-for-developers/">APIs</a> that correspond to major social media platforms. 
+                    The CIB Mango Tree assumes researchers already have datasets of online activity in CSV format that they wish to analyze.
+                  </div>
+                  <div>
+                    The CIB Mango Tree provides <b>generic tests</b> for CIB. Generic tests can be applied on datasets of online activity from a variety of social media and news sites.
+                    CIB Mango Tree tests are optimized for data housed in CSV files, and assumes that CIB can be detected by analyzing a variety of <b>parameters</b>that datasets of online activity will likely have. 
+                  </div>
                 </div>
                 <hr>
-                <div>
-                  <span>
-                    <b>Parameters include:</b>
-                  </span>
-                  <ul>
-                    <li>Unique Post Number (UPN) = a unique number applied to every scraped post/comment</li>
-                    <li>Unique Post Username = the unique username of the account that made the post/comment</li>
-                    <li>Post Time/Date = the time and date that an individual post/comment was made</li>
-                    <li>Post Content = the written content of an individual post/comment</li>        
-                  </ul>
-                  <span>
-                    CIB Mango Tree tests will use some or all of the available parameters to search for signs of coordinated inauthentic behavior. 
-                  </span>
+                <ul class="nav nav-tabs" id="dataPrepTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="param-reference-tab" data-bs-toggle="tab" data-bs-target="#param-reference-tab-pane" type="button" role="tab" aria-controls="param-reference-tab-pane" aria-selected="true">Parameter Examples</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sample-one-tab" data-bs-toggle="tab" data-bs-target="#sample-one-tab-pane" type="button" role="tab" aria-controls="sample-one-tab-pane" aria-selected="false">Sample Dataset #1</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sample-two-tab" data-bs-toggle="tab" data-bs-target="#sample-two-tab-pane" type="button" role="tab" aria-controls="sample-two-tab-pane" aria-selected="false">Sample Dataset #2</button>
+                  </li>
+                </ul>
+                <div class="tab-content mt-2" id="paramReferenceContent">
+                  <div class="tab-pane fade show active" id="param-reference-tab-pane" role="tabpanel" aria-labelledby="param-reference-tab" tabindex="0">
+                    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
+                      <div class="col-md">
+                        <div class="card h-100">
+                          <h5 class="card-header">Unique Post Number</h5>
+                          <div class="card-body">                          
+                            <p class="card-text">A unique number applied to every scraped post/comment</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="card h-100">
+                          <h5 class="card-header">Unique Post Username</h5>
+                          <div class="card-body">                          
+                            <p class="card-text">The unique username of the account that made the post/comment</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="card h-100">
+                          <h5 class="card-header">Post Date</h5>
+                          <div class="card-body">                          
+                            <p class="card-text">The date that an individual post/comment was made</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="card h-100">
+                          <h5 class="card-header">Post Time</h5>
+                          <div class="card-body">                          
+                            <p class="card-text">The time of day that an individual post/comment was made</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md">
+                        <div class="card h-100">
+                          <h5 class="card-header">Post Content</h5>
+                          <div class="card-body">                          
+                            <p class="card-text">The written content of an individual post/comment</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-info mt-3">
+                      Each CIB Mango Tree test relies on different sets of parameters, depending on the nature of the tests. 
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="sample-one-tab-pane" role="tabpanel" aria-labelledby="sample-one-tab" tabindex="0">
+                    <div class="mb-2">
+                      Researchers must prepare their data to be run through our tests. Our test programs will detect the content within CSV files by scanning for the titles of each column of data. This means that every column of a data parameter must be headed using the parameter titles above. If columns are not headed using these parameter titles, our test programs will not be able to detect which data must be analyzed.
+                    </div>
+                    <h5 class="fst-italic">Before</h5>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-light mb-3">
+                        <thead>
+                          <tr>
+                            <th>Comment #</th>
+                            <th>RealUsername</th>
+                            <th>Date Posted</th>
+                            <th>Time Posted</th>
+                            <th>Comment</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>snipcerebrum</td>
+                            <td>5/2/2024</td>
+                            <td>6:01</td>
+                            <td>Watermelon cures cancer!</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>postboxinterest</td>
+                            <td>5/3/2024</td>
+                            <td>13:56</td>
+                            <td>Kiwi from Florida is poison</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>tautburden</td>
+                            <td>5/3/2024</td>
+                            <td>15:28</td>
+                            <td>Mango and IPA beer causes rashes</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>frazzledsplatter</td>
+                            <td>5/5/2024</td>
+                            <td>3:50</td>
+                            <td>Don’t believe the doctors about apples</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <h5 class="fst-italic">After</h5>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-light table-responsive">
+                        <thead>
+                          <tr>
+                            <th>Unique Post Number</th>
+                            <th>Unique Post Username</th>
+                            <th>Post Date</th>
+                            <th>Post Time</th>
+                            <th>Post Content</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>snipcerebrum</td>
+                            <td>5/2/2024</td>
+                            <td>6:01</td>
+                            <td>Watermelon cures cancer!</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>postboxinterest</td>
+                            <td>5/3/2024</td>
+                            <td>13:56</td>
+                            <td>Kiwi from Florida is poison</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>tautburden</td>
+                            <td>5/3/2024</td>
+                            <td>15:28</td>
+                            <td>Mango and IPA beer causes rashes</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>frazzledsplatter</td>
+                            <td>5/5/2024</td>
+                            <td>3:50</td>
+                            <td>Don’t believe the doctors about apples</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="sample-two-tab-pane" role="tabpanel" aria-labelledby="sample-two-tab" tabindex="0">
+                    <h5 class="fst-italic mb-2">Before</h5>
+                    <img src="./docs/images/sample-data-before.png" class="img-fluid mb-3" alt="sample-data-before">
+                    <h5 class="fst-italic mb-2">After</h5>
+                    <img src="./docs/images/sample-data-after.png" class="img-fluid" alt="sample-data-after">
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+            <div class="tab-pane fade" id="v-pills-tests" role="tabpanel" aria-labelledby="v-pills-tests-tab" tabindex="0">
               <div class="card card-body">
                 <h1 class="display-3">Generic Tests</h1>
                 <div class="row row-cols-1 g-4">
@@ -149,6 +275,7 @@
         </div>   
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+   </body>
 </html>
