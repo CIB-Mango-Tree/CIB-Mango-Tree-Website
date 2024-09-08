@@ -1,6 +1,7 @@
 # import csv
-import numpy as np
+# import numpy as np
 import json
+import re
 import pandas as pd
 
 
@@ -57,9 +58,16 @@ for username, freq in freqs.items():
         if username not in output:
             output[username] = {'freqs': []}
         output[username]['freqs'].append({
-            'tokens': tokens,
+            'tokens': re.sub("\\s+", " ", tokens),
             'count': count,
         })
 
-""" print(output) """
+
 json.dump(output, open("ngrams/fake_data_output.json", "w"))
+
+# csv view of the output data
+with open("ngrams/fake_data_output.csv", "w") as f:
+    f.write("username,ngrams,frequency\n")
+    for key, value in output.items():
+        for freq in value["freqs"]:
+            f.write(f"{key},\"{freq["tokens"]}\",{freq["count"]}\n")
