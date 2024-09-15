@@ -3,6 +3,7 @@
 from collections import defaultdict
 import json
 import re
+from typing import Any
 import pandas as pd
 
 
@@ -20,11 +21,13 @@ def ngrams(input: str, n: int) -> list[str]:
 
 
 USERNAME_FIELD_NAME = "id"
+MESSAGE_ID_FIELD_NAME = "timestamp"
 TEXT_FIELD_NAME = "body"
 
 
 def parse_ngram_freqs_per_user_data(data: pd.DataFrame):
-    freqs: dict[str, dict[str, int]] = {};
+    """ {[username]: {[ngram]: {count: int, messageId: str}}} """
+    freqs: dict[str, dict[str, dict[str, Any]]] = {};
     for _, row in data.iterrows():
         if row[USERNAME_FIELD_NAME] not in freqs:
             username = f"{row[USERNAME_FIELD_NAME]}";
@@ -36,11 +39,12 @@ def parse_ngram_freqs_per_user_data(data: pd.DataFrame):
 
             if not isinstance(text, str):
                 break
-            for g in ngrams(text, n):
+            for gram in ngrams(text, n):
                 username = f"{row[USERNAME_FIELD_NAME]}";
-                if g not in freqs[username]:
-                    freqs[username][g] = 0
-                freqs[username][g] += 1
+                if gram not in freqs[username]:
+                    messageId = f"{row[MESSAGE_ID_FIELD_NAME]}"
+                    freqs[username][gram] = {"count": 0, "messageId": messageId}
+                freqs[username][gram]["count"] += 1
 
     return freqs
 
@@ -58,14 +62,14 @@ freqs = parse_ngram_freqs_per_user_data(
 totals = defaultdict(int)
 
 for username, data in freqs.items():
-    for tokens, count in data.items():
+    for tokens, datum in data.items():
         tokens = re.sub("\\s+", " ", tokens);
         if tokens not in output:
             output[tokens] = {'freqs': []}
 
         data = {'username': username,
-                'count': count,
-                "messageId": 1, #TODO:...
+                'count': datum["count"],
+                "messageId": datum["messageId"], #TODO:...
                 }
         totals[tokens] += 1
         output[tokens]['freqs'].append(data)
