@@ -1,16 +1,17 @@
 # import csv
 # import numpy as np
+from collections import defaultdict
 import json
 import re
 import pandas as pd
 
 
 def ngrams(input: str, n: int) -> list[str]:
-    input = input.split(' ')
+    inputs = input.split(' ')
     output = []
 
-    for i in range(len(input)-n+1):
-        gram = ' '.join(input[i:i+n])
+    for i in range(len(inputs)-n+1):
+        gram = ' '.join(inputs[i:i+n])
         output.append(gram)
 
     return output
@@ -23,51 +24,59 @@ TEXT_FIELD_NAME = "body"
 
 
 def parse_ngram_freqs_per_user_data(data: pd.DataFrame):
-    freqs = {}
-    for idx, row in data.iterrows():
+    freqs: dict[str, dict[str, int]] = {};
+    for _, row in data.iterrows():
         if row[USERNAME_FIELD_NAME] not in freqs:
-            freqs[row[USERNAME_FIELD_NAME]] = {}
+            username = f"{row[USERNAME_FIELD_NAME]}";
+            freqs[username] = {}
 
-        MAX_N = 4
-        for n in range(1, MAX_N + 1):
+        MAX_N = 5
+        for n in range(3, MAX_N + 1):
             text = row[TEXT_FIELD_NAME]
 
             if not isinstance(text, str):
                 break
             for g in ngrams(text, n):
-                if g not in freqs[row[USERNAME_FIELD_NAME]]:
-                    freqs[row[USERNAME_FIELD_NAME]][g] = 0
-                freqs[row[USERNAME_FIELD_NAME]][g] += 1
+                username = f"{row[USERNAME_FIELD_NAME]}";
+                if g not in freqs[username]:
+                    freqs[username][g] = 0
+                freqs[username][g] += 1
 
     return freqs
 
 
 """
-listof
-{ [username]: { freqs: { tokens: str, count: int } }}
+{ "...tokens...": list<{ freqs: { username: str, count: int, messageId: str } }>}
 """
-output = {}
+output: dict[str, dict[str, list[dict[str, int | str]]]] = {}
 
 
 freqs = parse_ngram_freqs_per_user_data(
     pd.read_csv("ngrams/reddit_vm.csv", dtype={"id": "string"})
 )
 
-for username, freq in freqs.items():
-    for tokens, count in freq.items():
-        if username not in output:
-            output[username] = {'freqs': []}
-        output[username]['freqs'].append({
-            'tokens': re.sub("\\s+", " ", tokens),
-            'count': count,
-        })
+totals = defaultdict(int)
+
+for username, data in freqs.items():
+    for tokens, count in data.items():
+        tokens = re.sub("\\s+", " ", tokens);
+        if tokens not in output:
+            output[tokens] = {'freqs': []}
+
+        data = {'username': username,
+                'count': count,
+                "messageId": 1, #TODO:...
+                }
+        totals[tokens] += 1
+        output[tokens]['freqs'].append(data)
 
 
 json.dump(output, open("ngrams/fake_data_output.json", "w"))
 
 # csv view of the output data
 with open("ngrams/fake_data_output.csv", "w") as f:
-    f.write("username,ngrams,frequency\n")
-    for key, value in output.items():
-        for freq in value["freqs"]:
-            f.write(f"{key},\"{freq["tokens"]}\",{freq["count"]}\n")
+    f.write("ngrams,username,messageId,frequency by user,ngram frequency\n")
+    outputs = sorted(output.items(), key = lambda item: totals[item[0]], reverse= True)
+    for tokens, value in outputs:
+        for data in value["freqs"]:
+            f.write(f"\"{tokens}\",{data["username"]},{data["messageId"]},{data["count"]},{totals[tokens]}\n")
