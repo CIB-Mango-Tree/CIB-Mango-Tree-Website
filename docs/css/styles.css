@@ -8,3 +8,10 @@
     background-position: 50% 20%;
     background-size: 1000px;
 }
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 1rem;
+
+}
