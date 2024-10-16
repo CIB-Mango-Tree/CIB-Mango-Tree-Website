@@ -13,5 +13,26 @@
     position: sticky;
     position: -webkit-sticky;
     top: 1rem;
+}
 
+.download-button {
+    display: flex;
+    border-radius: 20px;
+    border: none;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 12rem;
+}
+
+.download-button:last-child {
+    margin-right: 0;
+}
+
+.download-mango-icon {
+    width: 3.5rem;
+}
+
+.download-small-icon {
+    width: 2rem;
 }
