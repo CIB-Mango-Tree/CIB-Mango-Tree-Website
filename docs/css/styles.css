@@ -44,18 +44,22 @@
 
 .req-fields {
     margin: .1em;
-    martin-top: 1em;
+    margin-top: 1em;
 }
 
 .reqs-boxes {
     text-align: center;
-    vertical-align: middle;
+    vertical-align: center;
     margin: .1em;
     margin-bottom: 1em;
     width: 10em;
     border-width:3px; 
     border-style:solid; 
     border-color:#000000; 
-    background-color:#7b7b7ba7; 
+    background-color:#c9daf8ff; 
     padding: .1em;
+}
+
+.body {
+    padding-top: 1em;
 }
