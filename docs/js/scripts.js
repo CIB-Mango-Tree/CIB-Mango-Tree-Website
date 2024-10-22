@@ -1,4 +1,4 @@
-customElements.define('test-summary',
+/*customElements.define('test-summary',
   class extends HTMLElement {
     constructor() {
       super();
@@ -8,4 +8,12 @@ customElements.define('test-summary',
       const shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(template.cloneNode(true));
   }
-});
+});*/
+
+customElements.define("test-summary", class extends HTMLElement {
+    connectedCallback() {
+      let template = document.getElementById(this.nodeName);
+      this.innerHTML = template.innerHTML;
+      this.append(template.content.cloneNode(true))
+    }
+  })
