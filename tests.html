@@ -60,8 +60,8 @@
 								<div class ="req-fields"><em>Required Fields:</em></div> 		
 								<slot name="req-fields"></slot>
 							  </div>
-							  <div class="learn-more">
-							        <a class="btn btn-primary col-2" href="">Learn More</a>
+							  <div class="test-details-btn">
+								<slot name="test-details-link"></slot>
 							  </div>
 						  </div>
 						</div>
@@ -76,6 +76,9 @@
 					<div class="reqs-boxes">Unique Post Number</div>
 					<div class="reqs-boxes">Post Content</div>
 				  </div>
+				  <a slot="test-details-link" class="btn btn-primary" href="/">
+					  See Test					  
+				  </a>
 				</test-summary>
 				<test-summary>
 				      <span slot="test-name">Post Frequency</span>
@@ -86,6 +89,9 @@
 						<div class="reqs-boxes">Post</div>
 						<div class="reqs-boxes">Post Time</div>
 					  </div>
+					  <a slot="test-details-link" class="btn btn-primary" href="/">
+						  See Test					  
+					  </a>
 				</test-summary>
 				<test-summary>
 				      <span slot="test-name">Post Time Coordination</span>
@@ -96,6 +102,9 @@
 							<div class="reqs-boxes">Date</div>
 							<div class="reqs-boxes">Post Time</div>
 					  </div>
+					  <a slot="test-details-link" class="btn btn-primary" href="tests_time_coor.html">
+						  See Test					  
+					  </a>
 				</test-summary>
 			</div>
 		</div>
