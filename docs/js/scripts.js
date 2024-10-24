@@ -10,10 +10,14 @@ customElements.define('test-summary',
   }
 });
 
-/*customElements.define("test-summary", class extends HTMLElement {
-    connectedCallback() {
-      let template = document.getElementById(this.nodeName);
-      this.innerHTML = template.innerHTML;
-      this.append(template.content.cloneNode(true))
-    }
-  })*/
+customElements.define('test-details',
+  class extends HTMLElement {
+    constructor() {
+      super();
+      const template = document
+        .getElementById('test-details-template')
+        .content;
+      const shadowRoot = this.attachShadow({mode: 'open'})
+        .appendChild(template.cloneNode(true));
+  }
+});
