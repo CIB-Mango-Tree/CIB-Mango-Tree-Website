@@ -52,8 +52,8 @@
 							column-gap: 6px;
 						}
 
-						.req-fields {
-							
+						.req-fields-label {
+							margin-top: 20px;
 						}
 
 						.test-details-btn {
@@ -72,8 +72,8 @@
 							</div>
 							<div class="test-description"> 
 								<slot name="test-description">A test to examine for identical strings of text repeated across posts, AKA “copypasta.”</slot>											
-								<div class="req-fields"><em>Required Fields:</em></div> 	
-								<slot name="req-fields" class="req-fields"></slot>
+								<div class="req-fields-label"><em>Required Fields:</em></div> 	
+								<slot name="req-fields"></slot>
 							  </div>
 							  <div class="test-details-btn">
 								<slot name="test-details-link"></slot>
