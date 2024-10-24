@@ -47,9 +47,13 @@
 							flex: 1 1 auto;
 						}
 
-						.req-fields {
+						slot[name=req-fields]::slotted(*){
 							display: flex;
 							column-gap: 6px;
+						}
+
+						.req-fields {
+							
 						}
 
 						.test-details-btn {
