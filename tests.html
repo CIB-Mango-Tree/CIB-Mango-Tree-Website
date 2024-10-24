@@ -46,6 +46,11 @@
 							flex: 1 1 auto;
 						}
 
+						.req-fields {
+							display: flex;
+							column-gap: 6px;
+						}
+
 						.test-details-btn {
 							flex: 0 0 auto;
 						}
@@ -63,7 +68,9 @@
 							<div class="test-description"> 
 								<slot name="test-description">A test to examine for identical strings of text repeated across posts, AKA “copypasta.”</slot>											
 								<div class="req-fields"><em>Required Fields:</em></div> 		
-								<slot name="req-fields"></slot>
+								<div class="req-fields">
+									<slot name="req-fields"></slot>
+								</div>
 							  </div>
 							  <div class="test-details-btn">
 								<slot name="test-details-link"></slot>
