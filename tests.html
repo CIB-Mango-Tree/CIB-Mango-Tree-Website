@@ -71,11 +71,11 @@
 								<img src="./docs/images/low-hanging-circle.png">
 							</div>
 							<div class="test-description"> 
-								<slot name="test-description">A test to examine for identical strings of text repeated across posts, AKA “copypasta.”</slot>											
+								<slot name="test-description"></slot>											
 								<div class="req-fields-label"><em>Required Fields:</em></div> 	
-								<slot name="req-fields"></slot>
+								<slot name="req-fields">None</slot>
 							  </div>
-							  <div class="test-details-btn">
+							  <div class="test-details-btn btn btn-primary">
 								<slot name="test-details-link"></slot>
 							  </div>
 						  </div>
@@ -91,7 +91,7 @@
 					<div class="reqs-boxes">Unique Post Number</div>
 					<div class="reqs-boxes">Post Content</div>
 				  </div>
-				  <a slot="test-details-link" class="btn btn-primary" href="/">
+				  <a slot="test-details-link" href="/">
 					  See Test					  
 				  </a>
 				</test-summary>
