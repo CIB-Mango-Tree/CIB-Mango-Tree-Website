@@ -44,6 +44,11 @@
 									display: block;
 								}
 
+								slot[name="reqs-boxes"]::slotted(*) {
+									display: flex;
+									flex-wrap: wrap;
+								}
+
 								slot[name="output-image"]::slotted(*) {
 									width: 100%;
 								}
