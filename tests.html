@@ -62,10 +62,9 @@
 						}
 
 						slot[name=test-details-link]::slotted(*){
-							padding-left: 20px;
-							padding-right: 20px;
+							padding-left: 20px !important;
+							padding-right: 20px !important;
 							text-decoration: none !important;
-							color: inherit !important;
 						}
 					</style>
 					<div class="col">
@@ -99,7 +98,7 @@
 					<div class="reqs-boxes">Unique Post Number</div>
 					<div class="reqs-boxes">Post Content</div>
 				  </div>
-				  <a slot="test-details-link" href="/">
+				  <a slot="test-details-link" class="btn btn-primary" href="/">
 					  See Test					  
 				  </a>
 				</test-summary>
@@ -112,7 +111,7 @@
 						<div class="reqs-boxes">Post</div>
 						<div class="reqs-boxes">Post Time</div>
 					  </div>
-					  <a slot="test-details-link" href="/">
+					  <a slot="test-details-link" class="btn btn-primary" href="/">
 						  See Test					  
 					  </a>
 				</test-summary>
