@@ -68,7 +68,7 @@ let templateHTML =
 			</div>
 		</template>`;
 
-const templatePlaceholder = document.getElementById("template-placeholder");
+let templatePlaceholder = document.getElementById("template-placeholder");
 templatePlaceholder.outerHTML = templateHTML;
 
 customElements.define('test-details',
