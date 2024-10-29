@@ -1,4 +1,5 @@
-let templateHTML = `<template id="test-details-template">
+let templateHTML = 
+	`<template id="test-details-template">
 			<style>
 				@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
 				@import url("./docs/css/styles.css");
