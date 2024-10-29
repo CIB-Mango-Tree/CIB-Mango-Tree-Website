@@ -67,7 +67,7 @@ const templateHTML = `
 				</div>
 			</div>
 		</template>
-  `
+  `;
 
 const templatePlaceholder = document.getElementById("template-placeholder");
 templatePlaceholder.outerHTML = templateHTML;
