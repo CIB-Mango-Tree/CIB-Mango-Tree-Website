@@ -1,4 +1,4 @@
-let templateHTML = '<template id="test-details-template">
+let templateHTML = `<template id="test-details-template">
 			<style>
 				@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
 				@import url("./docs/css/styles.css");
@@ -65,7 +65,7 @@ let templateHTML = '<template id="test-details-template">
 					</div>
 				</div>
 			</div>
-		</template>';
+		</template>`;
 
 const templatePlaceholder = document.getElementById("template-placeholder");
 templatePlaceholder.outerHTML = templateHTML;
