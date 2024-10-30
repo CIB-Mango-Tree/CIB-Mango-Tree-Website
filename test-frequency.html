@@ -37,16 +37,6 @@
 						<div id="template-placeholder"></div>
 						<test-details>
 							<span slot="test-title">Post Time Coordination Test</span>
-							<span slot="test-summary">
-								This test scans for usernames that post at similar times on
-								more than one occasion, revealing signs of possible
-								coordination. It will rank groups of usernames by the number
-								of times that their posts appeared together during the
-								timespan of your dataset, from highest to lowest.  You will be
-								able to identify whether sets of usernames are posting
-								together at a frequency that suggests coordination or bot
-								activity, and examine their content.
-							</span>
 							<a slot="code-link" href="https://cib-mango-tree.github.io/CIB-Mango-Tree-Website/"><b>See
 													Code for Test on GitHub</b></a>
 							<a
@@ -56,7 +46,7 @@
 												Coordinated Behavior in the Twitter Campaign to Reopen
 												America.” in Social-Cybersecurity in Times of Crisis
 												and Change Conference, 2020.</a>
-							<div slot="reqs-boxes">
+                        	<div slot="reqs-boxes">
 								<div class="reqs-boxes">Unique Post Username</div>
 								<div class="reqs-boxes">Unique Post Number</div>
 								<div class="reqs-boxes">Date</div>
@@ -65,68 +55,43 @@
 							<div slot="optional-reqs-boxes">
 								<div class="reqs-boxes">Post Content</div>
 							</div>
-							<ol slot="test-process" type="1">
-								<br>
+                            <br><br>
+
+
+							<div slot="test-process">
+                                <div>
 												<li>
-													The test will divide the timespan of your dataset
-													(the length of time over which data was collected)
-													into discrete 10 minute windows.
+													Set Time Window Length: Start by specifying the desired length of time windows for the 24-hour period 
+                                                    (recommended: 30 minutes).
 												</li>
 												<li>
-													The test will tally how many times a pair of
-													usernames posted within the same 10-minute window on
-													multiple occasions throughout the duration of your
-													dataset.
+                                                    Tally Posts: The test will count the posts made in each time window across your dataset. For example, with a 30-minute window, 
+                                                    it will count posts from 12:00 AM to 12:30 AM, 12:30 AM to 1:00 AM, and so on.
 												</li>
 												<li>
-													In order to check for larger groups that may be
-													coordinating, the test will then count the number of
-													times a trio of usernames posted in the same 10
-													minute time window in more than one instance,
-													followed by the number of times a quartet (4)
-													usernames posted in the same 10 minute time window,
-													and so on.
-												</li>
-												<li>
-													The test will cease running when the maximum group
-													size to have posted in the same 10 minute time
-													window in more than one instance is found.
-												</li>
-												<li>
-													The test will then rank these groups by the number
-													of times they posted in more than one time window,
-													from highest to lowest. The test will produce a
-													separate csv file for each group size (pairs, trios,
-													etc.) that was found.
+                                                    Graph Results: Finally, the test will display these frequencies in a csv file and bar chart, with each bar 
+                                                    representing a specific time window across the 24-hour period.
 												</li>
 											</ol>
+                                        </div>
 							<div slot="test-process">
-								<br>
-								<span><b>.csv Output Format</b></span>
-											<ul>
-												<li>
-													The test will produce a separate .csv file for each
-													group size that was found to have posted in more
-													than one time window. (NOTE: The test will only
-													produce a csv file for group sizes found. I.e. there
-													may not necessarily be groups of size three or four
-													which posted in the same time window over more than
-													one occasion. Therefore, the test may not produce a
-													csv displaying groups of size three, four etc.)
-												</li>
-
-												<li>
-													Within each csv file, the test will rank each group
-													by the number of times they posted across more than
-													one time window, from highest to lowest. The csv
-													will display all the instances that the usernames
-													belonging to each group posted, including the UPNs
-													of each post, the content of each post, and the time
-													of each post
-												</li>
-											</ul>
+                                <br>
+								<span><b>Option 1: CSV Output</b></span>
+                                <div>
+                                    The test will produce a .csv file that provides the numerical tallies of posts for each 
+                                    given time window in the 24-hour period. 
+                                </div><br>
+                                <img src="/html_output/images/csv_sample.jpg" alt="Sample CSV Output" style="max-width: 100%; height: auto; display: block; border: 2px solid #007bff; border-radius: 8px; padding: 5px;">
 							</div>
-							<img slot="output-image" src="./docs/images/time_synchronized_diagram.png" />
+                            <div slot="test-process">
+                                <br>
+								<span><b>Option 2: Bar Chart</b></span>
+                                <div>
+                                    The test will also produce a link to a dashboard that can be run locally in your browser (this dashboard does not involve 
+                                    a connection to the internet). The dashboard will render the 24-hour graph of post frequency. 
+                                </div><br>
+                                <img src="/html_output/images/barchart.png" alt="Sample CSV Output" style="max-width: 100%; height: auto; display: block; border: 2px solid #007bff; border-radius: 8px; padding: 5px;">
+							</div>
 						</test-details>
 					</div>
 				</div>
