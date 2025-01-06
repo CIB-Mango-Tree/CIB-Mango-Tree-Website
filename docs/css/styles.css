@@ -15,11 +15,17 @@
     top: 1rem;
 }
 
+.header-link {
+    color: inherit;
+}
+
 .header-logo {
-    max-width: 5%;
-    max-height: 3rem;
-    height: auto;
-    margin-right: 0.5%;
+    max-height: 5rem;
+    width: auto;
+}
+
+.header-text {
+    margin-left: 1%;
 }
 
 .header-link {
