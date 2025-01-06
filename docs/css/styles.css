@@ -15,6 +15,17 @@
     top: 1rem;
 }
 
+.header-logo {
+    max-width: 5%;
+    max-height: 3rem;
+    height: auto;
+    margin-right: 0.5%;
+}
+
+.header-link {
+    color: inherit;
+}
+
 .download-button {
     display: flex;
     align-items: center;
