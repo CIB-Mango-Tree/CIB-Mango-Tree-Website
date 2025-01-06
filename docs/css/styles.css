@@ -17,6 +17,8 @@
 
 .download-button {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     border-radius: 20px;
     border: none;
     padding: 1rem;
