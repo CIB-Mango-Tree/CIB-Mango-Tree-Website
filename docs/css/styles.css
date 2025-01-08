@@ -25,7 +25,8 @@
 }
 
 .header-text {
-    margin-left: 1%;
+    margin-left: 2%;
+    white-space: nowrap;
 }
 
 .header-link {
