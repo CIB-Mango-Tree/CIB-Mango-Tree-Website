@@ -6,7 +6,7 @@
     background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0),white), url("../images/mango-tree.PNG");
     background-repeat: no-repeat;
     background-position: 50% 20%;
-    background-size: 1000px;
+    background-size: 90vw;
 }
 
 .sticky {
@@ -34,9 +34,13 @@
 }
 
 .nav .dropdown-menu {
-    position: static; /* Ensure the dropdown menu is positioned within the flow of the document */
-    display: block; /* Ensure the dropdown menu is always visible */
-  }
+    position: static;
+    display: block;
+}
+
+.col-9 .card-body {
+    opacity: 0.8;
+}
 
 .download-button {
     display: flex;
