@@ -33,6 +33,11 @@
     color: inherit;
 }
 
+.nav .dropdown-menu {
+    position: static; /* Ensure the dropdown menu is positioned within the flow of the document */
+    display: block; /* Ensure the dropdown menu is always visible */
+  }
+
 .download-button {
     display: flex;
     align-items: center;
