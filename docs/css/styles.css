@@ -15,19 +15,16 @@
     top: 1rem;
 }
 
-.header-link {
-    color: inherit;
-}
-
 .header-logo {
     max-height: 5rem;
     width: auto;
 }
 
-.header-text {
-    margin-left: 2%;
-    white-space: nowrap;
-}
+@media (max-width: 768px) {
+    .header-logo {
+      height: 4rem;
+    }
+  }
 
 .header-link {
     color: inherit;
@@ -73,7 +70,7 @@
 
 .req-fields {
     margin: .1em;
-    martin-top: 1em;
+    margin-top: 1em;
 }
 
 .reqs-boxes {
