@@ -38,8 +38,8 @@
     display: block;
 }
 
-.col-9 .card-body {
-    opacity: 0.8;
+.transparent-card {
+    opacity: 0.85;
 }
 
 .download-button {
