@@ -64,68 +64,38 @@
           <div class="col-12 col-md-9">
             <div class="card card-body transparent-card">
               <h1 class="display-3 mb-4">Data Preparation</h1>
+              <!-- Data Preparation Page Content -->
               <div>
-                <div class="lead mb-2 fst-italic">Steps to prepare your data for analysis</div>
-                <br>
-                <div>
-                  <b>Note:</b> The CIB Mango Tree does not scrape your social media activity directly. Instead, it is used in the post-analysis 
-                  phase to help you recognize patterns of CIB activity. If you need assistance with scraping data, you can find various tools online, such as 
-                  <a href="https://quickscraper.co/" target="_blank" rel="noopener noreferrer">Quick Scraper</a>.<br><br>  
-
-                  When you scrape your social media activity, the resulting dataset will be likely in a .csv, .json, or .xlsx format. 
-                  The specific attributes of these columns are called parameters. The CIB Mango Tree's command line interface provides a set of tests 
-                  that can analyze on your data. <br><br> These tests currently rely on the five specific parameters below:	
-                </div>
-                <br>
+                <b><i>Note: The CIB Mango Tree does not scrape your social media activity directly. Instead, it is used in the post-analysis 
+                phase to help you recognize patterns of CIB activity. If you need assistance with scraping data, you can find various tools online, such as 
+                <a href="https://quickscraper.co/" target="_blank" rel="noopener noreferrer">Quick Scraper</a>.</i></b>
+                <br><br>  
+                <p>
+                  Whether in .csv, .json, or .xlsx form, nearly all datasets of social media activity
+                  contain columns that correspond to conceptually similar parameters, such as 
+                  <b>username</b>, <b>post content</b>, or a <b>unique post number</b> attached to each post.
+                </p>
+                <p>
+                  The Mango Tree command line interface (CLI) provides a set of tests that require 
+                  different parameters for analysis (e.g. tests examining for CIB based on repeated 
+                  phrases require the parameter for post content). See the <a href="tests.html"><b>List of Tests</b></a> 
+                  page for information regarding which parameters are needed for each test.
+                </p>
+                <p>
+                  The parameters currently employed by CIB Mango Tree tests are listed below:
+                </p>
+                <!-- Graph of Parameters -->
+                <img class="w-100" src="docs/images/data-prep-parameters.png">
+                <p class="mt-1">
+                  <b>Note</b>: <i>Some datasets have parameters related to time that are 
+                    separated into multiple columns, such as post time and post date. 
+                    Other datasets have a single column where time of day and date are 
+                    represented in combined format, often called timestamp. Both formats are 
+                    readable by the CLI.</i>
+                </p>
               </div>
-
-              <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col-md">
-                  <div class="card h-100">
-                    <h5 class="card-header">Unique Post Number</h5>
-                    <div class="card-body">                          
-                      <p class="card-text">A unique number applied to every scraped post/comment</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-md">
-                  <div class="card h-100">
-                    <h5 class="card-header">Unique Post Username</h5>
-                    <div class="card-body">                          
-                      <p class="card-text">The unique username of the account that made the post/comment</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="card h-100">
-                    <h5 class="card-header">Post Date</h5>
-                    <div class="card-body">                          
-                      <p class="card-text">The date that an individual post/comment was made</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="card h-100">
-                    <h5 class="card-header">Post Time</h5>
-                    <div class="card-body">                          
-                      <p class="card-text">The time of day that an individual post/comment was made</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="card h-100">
-                    <h5 class="card-header">Post Content</h5>
-                    <div class="card-body">                          
-                      <p class="card-text">The written content of an individual post/comment</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <br>
-              
               <hr>
-
+              <!-- Step 1 -->
               <div>
                 <h3>Step 1: Understand your database’s columns</h3><br>
                 <div>
