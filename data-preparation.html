@@ -94,143 +94,191 @@
                     readable by the CLI.</i>
                 </p>
               </div>
+
               <hr>
+
               <!-- Step 1 -->
               <div>
-                <h3>Step 1: Understand your database’s columns</h3><br>
-                <div>
-                  To ensure your database works with CIB Mango’s Tree, you need to rename your columns with our five standard parameters. 
-                  Don't worry—your columns are probably very similar to these parameters! <br><br>For instance, if your column is labeled 
-                  “account name” or “User ID,” it likely corresponds to “Unique Username.” Use your best judgment when matching them up or if 
-                  you used scraping software, reach out to them for help in assigning the correct parameters.<br><br>
-                  To see how this looks check out Sample Database #1 and Sample Database 2.
-                </div>
+                <h3>Step 1: Understand your database&#39;s columns</h3><br>
+                <p>
+                  Your dataset might have different names for each of its columns, but the data within 
+                  often corresponds to the parameters above. For example: "Unique UserID" might be 
+                  labeled in your data as "account name" or "User ID".
+                </p>
+                <p>
+                  In order to properly use CIB Mango Tree test programs, you will need to be able to 
+                  identify which columns in your dataset hold data that is conceptually identical to 
+                  the parameters above. You can use your best judgment, or contact the supplier of 
+                  your dataset to assign the correct parameters. The Mango Tree will attempt to 
+                  identify these parameters and present you with its options.
+                </p>
+                <p>
+                  Let's look at two sample datasets of social media activity:
+                </p>
               </div>		
               <br>
-
-              <ul class="nav nav-tabs" id="dataPrepTabs" role="tablist">
-                <li class="nav-item dropdown" role="presentation">
-                  <a class="nav-link btn btn-outline-primary dropdown-toggle" id="sample-one-tab" data-bs-toggle="dropdown" href="#" role="tab" aria-controls="sample-one-tab-pane" aria-expanded="false">Sample Dataset #1</a>
-                  <ul class="dropdown-menu" aria-labelledby="sample-one-tab">
-                    <li><a class="dropdown-item" href="#sample-one-before" data-bs-toggle="tab">Before</a></li>
-                    <li><a class="dropdown-item" href="#sample-one-after" data-bs-toggle="tab">After</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown" role="presentation">
-                  <a class="nav-link btn btn-outline-primary dropdown-toggle" id="sample-two-tab" data-bs-toggle="dropdown" href="#" role="tab" aria-controls="sample-two-tab-pane" aria-expanded="false">Sample Dataset #2</a>
-                  <ul class="dropdown-menu" aria-labelledby="sample-two-tab">
-                    <li><a class="dropdown-item" href="#sample-two-before" data-bs-toggle="tab">Before</a></li>
-                    <li><a class="dropdown-item" href="#sample-two-after" data-bs-toggle="tab">After</a></li>
-                  </ul>
-                </li>
-              </ul>
-              
-              <div class="tab-content mt-3" id="paramReferenceContent">
-                <!-- Tab Pane for Sample Dataset #1 - Before -->
-                <div class="tab-pane fade" id="sample-one-before" role="tabpanel" aria-labelledby="sample-one-tab">
-                  <h5 class="fst-italic">Before</h5>
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-light mb-3">
-                      <thead>
-                        <tr>
-                          <th>Comment #</th>
-                          <th>RealUsername</th>
-                          <th>Date Posted</th>
-                          <th>Time Posted</th>
-                          <th>Comment</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>1</td><td>snipcerebrum</td><td>5/2/2024</td><td>6:01</td><td>Watermelon cures cancer!</td></tr>
-                        <tr><td>2</td><td>postboxinterest</td><td>5/3/2024</td><td>13:56</td><td>Kiwi from Florida is poison</td></tr>
-                        <tr><td>3</td><td>tautburden</td><td>5/3/2024</td><td>15:28</td><td>Mango and IPA beer causes rashes</td></tr>
-                        <tr><td>4</td><td>humormagpie</td><td>5/4/2024</td><td>11:02</td><td>Eat blueberries to boost intelligence!</td></tr>
-                        <tr><td>5</td><td>orbitalspider</td><td>5/5/2024</td><td>17:45</td><td>Avocados increase your life span.</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <!-- Tab Pane for Sample Dataset #1 - After -->
-                <div class="tab-pane fade" id="sample-one-after" role="tabpanel" aria-labelledby="sample-one-tab">
-                  <h5 class="fst-italic">After</h5>
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-light mb-3">
-                      <thead>
-                        <tr>
-                          <th>Unique Post Number</th>
-                          <th>Unique Post Username</th>
-                          <th>Post Date</th>
-                          <th>Post Time</th>
-                          <th>Post Content</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>1</td><td>snipcerebrum</td><td>5/2/2024</td><td>6:01</td><td>Watermelon cures cancer!</td></tr>
-                        <tr><td>2</td><td>postboxinterest</td><td>5/3/2024</td><td>13:56</td><td>Kiwi from Florida is poison</td></tr>
-                        <tr><td>3</td><td>tautburden</td><td>5/3/2024</td><td>15:28</td><td>Mango and IPA beer causes rashes</td></tr>
-                        <tr><td>4</td><td>humormagpie</td><td>5/4/2024</td><td>11:02</td><td>Eat blueberries to boost intelligence!</td></tr>
-                        <tr><td>5</td><td>orbitalspider</td><td>5/5/2024</td><td>17:45</td><td>Avocados increase your life span.</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <!-- Tab Pane for Sample Dataset #2 - Before -->
-                <div class="tab-pane fade" id="sample-two-before" role="tabpanel" aria-labelledby="sample-two-tab">
-                  <h5 class="fst-italic">Before</h5>
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-light mb-3">
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>User</th>
-                          <th>Timestamp</th>
-                          <th>Text</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>001</td><td>fruitlooper</td><td>5/2/2024 08:00</td><td>Oranges keep your heart healthy!</td></tr>
-                        <tr><td>002</td><td>strawberryeyes</td><td>5/3/2024 14:30</td><td>Cherries prevent aging!</td></tr>
-                        <tr><td>003</td><td>peachdreamer</td><td>5/4/2024 09:45</td><td>Bananas cure headaches!</td></tr>
-                        <tr><td>004</td><td>grapecrafter</td><td>5/5/2024 13:15</td><td>Carrots improve vision!</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <!-- Tab Pane for Sample Dataset #2 - After -->
-                <div class="tab-pane fade" id="sample-two-after" role="tabpanel" aria-labelledby="sample-two-tab">
-                  <h5 class="fst-italic">After</h5>
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-light mb-3">
-                      <thead>
-                        <tr>
-                          <th>Unique Post Number</th>
-                          <th>Unique Post Username</th>
-                          <th>Post Date</th>
-                          <th>Post Time</th>
-                          <th>Post Content</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>001</td><td>fruitlooper</td><td>5/2/2024</td><td>08:00</td><td>Oranges keep your heart healthy!</td></tr>
-                        <tr><td>002</td><td>strawberryeyes</td><td>5/3/2024</td><td>14:30</td><td>Cherries prevent aging!</td></tr>
-                        <tr><td>003</td><td>peachdreamer</td><td>5/4/2024</td><td>09:45</td><td>Bananas cure headaches!</td></tr>
-                        <tr><td>004</td><td>grapecrafter</td><td>5/5/2024</td><td>13:15</td><td>Carrots improve vision!</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+              <!-- Dataset A -->
+              <h5 class="mb-3">Dataset A</h5>
+              <div class="table-responsive">
+                <table class="table table-bordered table-light mb-3">
+                  <thead>
+                    <tr>
+                      <th>Comment #</th>
+                      <th>RealUsername</th>
+                      <th>Date Posted</th>
+                      <th>Time Posted</th>
+                      <th>Post Content</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>snipcerebrum</td>
+                      <td>5/2/2024</td>
+                      <td>6:01</td>
+                      <td>Watermelon cures cancer!</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>postboxinterest</td>
+                      <td>5/3/2024</td>
+                      <td>13:56</td>
+                      <td>Kiwi from Florida is poison</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>tautburden</td>
+                      <td>5/3/2024</td>
+                      <td>15:28</td>
+                      <td>Mango and IPA beer causes rashes</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>frazzledsplatter</td>
+                      <td>5/5/2024</td>
+                      <td>3:50</td>
+                      <td>Don't believe the doctors about apples</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> 
+              <!-- Dataset B --> 
+              <h5 class="mb-3">Dataset B</h5>
+              <div class="table-responsive">
+                <table class="table table-bordered table-light mb-3">
+                  <thead>
+                    <tr>
+                      <th>Unique Post Number</th>
+                      <th>Unique UserID</th>
+                      <th>Post Date</th>
+                      <th>Post Time</th>
+                      <th>Post Content</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>snipcerebrum</td>
+                      <td>5/2/2024</td>
+                      <td>6:01</td>
+                      <td>Watermelon cures cancer!</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>postboxinterest</td>
+                      <td>5/3/2024</td>
+                      <td>13:56</td>
+                      <td>Kiwi from Florida is poison</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>tautburden</td>
+                      <td>5/3/2024</td>
+                      <td>15:28</td>
+                      <td>Mango and IPA beer causes rashes</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>frazzledsplatter</td>
+                      <td>5/5/2024</td>
+                      <td>3:50</td>
+                      <td>Don't believe the doctors about apples</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              
+              <p>
+              Dataset A and Dataset B are identical, and yet the <b>columns</b> 
+              where the <b>parameters</b> are held have different names. For 
+              example, both Dataset A and Dataset B contain a parameter 
+              corresponding to a username for the account which made a post. In 
+              Dataset A, this parameter is titled "RealUsername" whereas it is 
+              called "Unique UserID" in Dataset B.
+              </p> 
+              <!-- Dataset C -->
+              <h5 class="mb-3">Dataset C</h5>
+              <div class="table-responsive">
+                <table class="table table-bordered table-light mb-3">
+                  <thead>
+                    <tr>
+                      <th>Unique Post Number</th>
+                      <th>Unique UserID</th>
+                      <th>Timestamp</th>
+                      <th>Post Content</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>snipcerebrum</td>
+                      <td>2024-5-2 06:01</td>
+                      <td>Watermelon cures cancer!</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>postboxinterest</td>
+                      <td>2024-5-3 13:56</td>
+                      <td>Kiwi from Florida is poison</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>tautburden</td>
+                      <td>2024-5-3 15:28</td>
+                      <td>Mango and IPA beer causes rashes</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>frazzledsplatter</td>
+                      <td>2024-5-5 3:50</td>
+                      <td>Don't believe the doctors about apples</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                Dataset C contains the same data as Dataset A and Dataset 
+                B. However, the time-related data of Dataset C is combined 
+                into a single column, titled "Timestamp". Meanwhile, the 
+                time-related data for Dataset A and Dataset B is divided into 
+                two columns, corresponding to date and time of day. CLI will 
+                be able to process your time-related data, regardless of 
+                whether it is divided into multiple columns or divided into 
+                a single column.
+              </p>
+              <p>
+                <b>Important!</b> <i>The columns in Dataset B and Dataset C 
+                  employ the same parameter titles as the CIB Mango Tree 
+                  command line interface!</i>
+              </p>
+
               <hr>
 
+              <!-- Step 2 -->
               <div>
-                <h3>Step 2: Prepare your file for testing</h3>
+                <h3>Step 2: Mapping your Database Columns in the CLI</h3>
+                <br>
                 <p>
-                  Once your columns are renamed to match the required parameters, save your database in a supported format (.csv, .json, .xlsx).
-                  Then, proceed to upload the prepared file into the CIB Mango Tree's command line interface for further analysis.
+                  
                 </p>
               </div>
             </div>
