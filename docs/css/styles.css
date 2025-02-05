@@ -45,6 +45,7 @@
     margin-right: 1rem;
     margin-bottom: 1rem;
     width: 12rem;
+    max-width: 100%;
 }
 
 .download-button:last-child {
