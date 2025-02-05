@@ -26,10 +26,6 @@
     }
   }
 
-.header-link {
-    color: inherit;
-}
-
 .nav .dropdown-menu {
     position: static;
     display: block;
