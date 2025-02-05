@@ -85,8 +85,8 @@
                   The parameters currently employed by CIB Mango Tree tests are listed below:
                 </p>
                 <!-- Graph of Parameters -->
-                <img class="w-100" src="docs/images/data-prep-parameters.png">
-                <p class="mt-1">
+                <img class="w-100 mb-2" src="docs/images/data-prep-parameters.png">
+                <p>
                   <b>Note</b>: <i>Some datasets have parameters related to time that are 
                     separated into multiple columns, such as post time and post date. 
                     Other datasets have a single column where time of day and date are 
@@ -278,7 +278,27 @@
                 <h3>Step 2: Mapping your Database Columns in the CLI</h3>
                 <br>
                 <p>
-                  
+                  When you run an analysis of your dataset in the Mango Tree CLI, 
+                  you will be asked by the CLI which columns in your dataset 
+                  correspond to the parameters needed for a given test.
+                </p>
+                <p>
+                  The CLI will present you with which columns in your dataset that 
+                  it believes correspond to the required parameters, and you will 
+                  be given the option to approve or correct the column mapping before 
+                  running the analysis. If columns are mapped incorrectly, the CLI 
+                  will not be able to provide you with accurate analysis.
+                </p>
+                <p>
+                  The below screenshot demonstrates how the CLI will ask you to change 
+                  the columns that it has mapped onto needed parameters, if 
+                  necessary.
+                </p>
+                <!-- Column mapping example image -->
+                <img class="w-100 mb-2" src="docs/images/data-prep-column-mapping.png">
+                <p>
+                  Once you have correctly mapped your dataset columns to the needed 
+                  parameters, you can run the tests and receive the analysis!
                 </p>
               </div>
             </div>
