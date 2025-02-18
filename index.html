@@ -81,22 +81,22 @@
         <!-- Navbar -->
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light pb-4">
           <!-- Navbar Logo -->
-          <a class="navbar-brand d-flex flex-row align-items-center ps-3" href="index.html">
+          <a class="navbar-brand d-flex flex-row align-items-center mx-auto mx-md-0 ps-md-4 ps-4" href="index.html">
             <img class="header-logo" src="docs/images/mango-text.PNG">
-            <div class="d-flex flex-column ps-2">
+            <div class="d-flex flex-column ps-3 ps-md-2">
               <p class="header-text mb-0">CIB Mango Tree</p>
               <p class="header-subtitle mb-0">A Civic Tech DC Project</p>
             </div>
           </a>
           <!-- Navbar Links -->
           <div class="collapse navbar-collapse">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="index.html">About</a>
-              <a class="nav-item nav-link" href="download-and-install.html">Download & Install</a>
-              <a class="nav-item nav-link" href="data-preparation.html">Data Preparation</a>
-              <a class="nav-item nav-link" href="tests.html">Test Library</a>
+            <div class="navbar-nav w-100 pe-4 ps-4 justify-content-between">
+              <a class="nav-item nav-link active col-2" href="index.html">About</a>
+              <a class="nav-item nav-link col-2" href="download-and-install.html">Download & Install</a>
+              <a class="nav-item nav-link col-2" href="data-preparation.html">Data Preparation</a>
+              <a class="nav-item nav-link col-2" href="tests.html">Test Library</a>
               <!-- Add news link once page is set up -->
-              <a class="nav-item nav-link">News</a>
+              <a class="nav-item nav-link col-2">News</a>
             </div>
           </div>
         </nav>
@@ -154,6 +154,7 @@
                 </div>
 
                 <div class="row mt-4">
+                  <!-- Keywords Section -->
                   <div class="col-md-6">
                     <div class="accordion" id="accordionKeywords">
                       <div class="accordion-item">
@@ -175,24 +176,23 @@
                       </div>
                     </div>
                   </div>
-                </div>
-
-                <!-- Tools Section -->
-                <div class="col-md-6 mb-4">
-                  <div class="accordion" id="accordionTools">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTools">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTools" aria-expanded="false" aria-controls="collapseTools">
-                          Tools You Will Use
-                        </button>
-                      </h2>
-                      <div id="collapseTools" class="accordion-collapse collapse" aria-labelledby="headingTools" data-bs-parent="#accordionTools">
-                        <div class="accordion-body">
-                          <ul>
-                            <li class="list-item"><strong>Python:</strong> A programming language that will help with sorting through your databases</li>
-                            <li class="list-item"><strong>Github:</strong> A community platform that allows developers to manage and share their code with others</li>
-                            <li class="list-item"><strong>Command Line Interface:</strong> A text-based interface on your computer that will allow you to look at your databases</li>
-                          </ul>
+                  <!-- Tools Section -->
+                  <div class="col-md-6 mb-4">
+                    <div class="accordion" id="accordionTools">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTools">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTools" aria-expanded="false" aria-controls="collapseTools">
+                            Tools You Will Use
+                          </button>
+                        </h2>
+                        <div id="collapseTools" class="accordion-collapse collapse" aria-labelledby="headingTools" data-bs-parent="#accordionTools">
+                          <div class="accordion-body">
+                            <ul>
+                              <li class="list-item"><strong>Python:</strong> A programming language that will help with sorting through your databases</li>
+                              <li class="list-item"><strong>Github:</strong> A community platform that allows developers to manage and share their code with others</li>
+                              <li class="list-item"><strong>Command Line Interface:</strong> A text-based interface on your computer that will allow you to look at your databases</li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>

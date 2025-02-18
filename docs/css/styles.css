@@ -9,12 +9,6 @@
     background-size: 90vw;
 }
 
-.sticky {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 1rem;
-}
-
 .header-logo {
     height: 3.2rem;
     width: auto;
@@ -29,9 +23,26 @@
     font-size: 0.6em;
 }
 
-.nav .dropdown-menu {
-    position: static;
-    display: block;
+.nav-link {
+    border: 2px solid #609949;
+    border-radius: 8px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: clamp(0.65em, 1.1vw, 1.5em);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    background-color: #a4cf4c;
+}
+
+.nav-link.active {
+    background-color: #609949;
+    color: #ffffff !important;
 }
 
 .transparent-card {
@@ -49,10 +60,6 @@
     margin-bottom: 1rem;
     width: 12rem;
     max-width: 100%;
-}
-
-.download-button:last-child {
-    margin-right: 0;
 }
 
 .download-mango-icon {
