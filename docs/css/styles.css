@@ -1,34 +1,48 @@
 .homepage-hero {
-    height:80vh;  
+    min-height:100vh;  
 }
 
 .page-container {
-    background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0),white), url("../images/mango-tree.PNG");
+    background-image: url("../images/mango-tree.PNG");
     background-repeat: no-repeat;
-    background-position: 50% 20%;
+    background-position: 50% -5%;
     background-size: 90vw;
 }
 
-.sticky {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 1rem;
-}
-
 .header-logo {
-    max-height: 5rem;
+    height: 3.2rem;
     width: auto;
 }
 
-@media (max-width: 768px) {
-    .header-logo {
-      height: 4rem;
-    }
-  }
+.header-text {
+    font-weight: 500;
+    font-size: 1.5em;
+}
 
-.nav .dropdown-menu {
-    position: static;
-    display: block;
+.header-subtitle {
+    font-size: 0.6em;
+}
+
+.nav-link {
+    border: 2px solid #609949;
+    border-radius: 8px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: clamp(0.65em, 1.1vw, 1.5em);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    background-color: #a4cf4c;
+}
+
+.nav-link.active {
+    background-color: #609949;
+    color: #ffffff !important;
 }
 
 .transparent-card {
@@ -46,10 +60,6 @@
     margin-bottom: 1rem;
     width: 12rem;
     max-width: 100%;
-}
-
-.download-button:last-child {
-    margin-right: 0;
 }
 
 .download-mango-icon {
