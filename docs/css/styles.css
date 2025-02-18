@@ -16,15 +16,18 @@
 }
 
 .header-logo {
-    max-height: 5rem;
+    height: 3.2rem;
     width: auto;
 }
 
-@media (max-width: 768px) {
-    .header-logo {
-      height: 4rem;
-    }
-  }
+.header-text {
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.header-subtitle {
+    font-size: 0.6em;
+}
 
 .nav .dropdown-menu {
     position: static;
