@@ -2,11 +2,22 @@
     min-height:100vh;  
 }
 
+/* Background image on mobile */
 .page-container {
     background-image: url("../images/mango-tree.PNG");
     background-repeat: no-repeat;
-    background-position: 50% -5%;
-    background-size: 90vw;
+    background-position: 50% 0%;
+    background-size: 150vw;
+}
+
+/* Background image on desktop */
+@media (min-width: 768px) {
+    .page-container {
+        background-image: url("../images/mango-tree.PNG");
+        background-repeat: no-repeat;
+        background-position: 50% -5%;
+        background-size: 90vw;
+    }
 }
 
 .header-logo {
