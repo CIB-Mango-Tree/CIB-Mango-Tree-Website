@@ -14,60 +14,103 @@
 		  max-width: 100%;
 		  height: auto;
 		}
-  
-		/* Sticky navigation bar adjustment for smaller screens */
-		.sticky {
-        max-height: 30vh;
-        overflow-y: auto;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+		.footer {
+          background-color: #6a9f5a;
+          color: white;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 100vw;
+          margin-top: auto; /* Ensures footer stays at the bottom */
+      }
+      .footer a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
       }
 
-      @media (max-width: 768px) {
-        .sticky {
-          position: relative;
-          top: 0;
-          margin-bottom: 1rem;
-        }
+      .footer a:hover {
+          text-decoration: underline;
       }
+      .footer-icons {
+          display: flex;
+          gap: 15px;
+          margin-top: 10px;
+          justify-content: center;
+      }
+
+      .footer-icons a {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+      }
+
+      .footer-icons img {
+          width: 24px;
+          height: 24px;
+      }
+      @media (min-width: 768px) {
+          .footer {
+              flex-direction: row;
+              justify-content: space-between;
+              text-align: left;
+              padding: 20px 40px;
+          }
+
+          .footer-left {
+              text-align: left;
+          }
+
+          .footer-right {
+              display: flex;
+              gap: 20px;
+              align-items: center;
+          }
+      }  
 	  </style>
 	</head>
 
 	<body>
-		<div class="container-fluid p-5 page-container">
-		  <!-- Header Section -->
-		  <div class="row mb-4">
-			<!-- Header Logo -->
-			<div class="col col-auto px-0">
-				<a href="index.html">
-					<img class="header-logo" src="docs/images/mango-text.PNG">
-				</a>
+		<div class="page-container">
+		<!-- Navbar -->
+		<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light pb-4">
+			<!-- Navbar Logo -->
+			<a class="navbar-brand d-flex flex-row align-items-center ps-md-4 ps-4" href="index.html">
+				<img class="header-logo" src="docs/images/mango-text.PNG">
+				<div class="d-flex flex-column ps-3 ps-md-2">
+				<p class="header-text mb-0">CIB Mango Tree</p>
+				<p class="header-subtitle mb-0">A Civic Tech DC Project</p>
+				</div>
+			</a>
+			<!-- Navbar Toggler -->
+			<button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>   
+			<!-- Navbar Links -->
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<div class="navbar-nav w-100 pe-4 ps-4 justify-content-between">
+				<a class="nav-item nav-link col-6 col-md-2" href="index.html">About</a>
+				<a class="nav-item nav-link col-6 col-md-2" href="download-and-install.html">Download & Install</a>
+				<a class="nav-item nav-link col-6 col-md-2" href="data-preparation.html">Data Preparation</a>
+				<a class="nav-item nav-link col-6 col-md-2 active" href="tests.html">Test Library</a>
+				<!-- Add news link once page is set up -->
+				<a class="nav-item nav-link col-6 col-md-2">News</a>
+				</div>
 			</div>
-			<!-- Header Text -->
-			<div class="col">
-			  <div class="display-5">CIB Mango Tree</div>
-			  <div class="fw-light">A Civic Tech DC Project</div>
-			</div>
-		  </div>
-	
+		</nav>	
 		  <!-- Main Content Section -->
 		  <div class="row p-5 homepage-hero">
-			<div class="d-flex flex-column flex-md-row">
-			  <!-- Sticky Navigation Menu -->
-			  <div class="nav flex-column nav-pills me-3 col-12 col-md-3 card card-body sticky">
-				<a class="d-flex justify-content-center nav-link text-center" href="index.html">About</a>
-				<a class="d-flex justify-content-center nav-link text-center" href="download-and-install.html">Download & Install</a>
-				<a class="d-flex justify-content-center nav-link text-center" href="data-preparation.html">Data Preparation</a>
-				<a class="d-flex justify-content-center nav-link text-center active" href="tests.html">Test Library</a>
-			  </div>
+			<div class="d-flex justify-content-center">
 
-          <div class="col-9 mb-5">
-            <div class="card card-body transparent-card">
-			<h1 class="display-3">Test Library</h1>
-			<div class="row row-cols-1 g-4">
-				<template id="test-summary-template">
-					<style>
+
+				<div class="col-9 mb-5">
+					<div class="card card-body transparent-card">
+					<h1 class="display-3">Test Library</h1>
+					<div class="row row-cols-1 g-4">
+						<template id="test-summary-template">
+							<style>
 						
   /* General Styling */
   .img-fluid {
@@ -242,10 +285,38 @@
           </div>
         </div>   
       </div>
+	  <footer class="footer">
+        <div class="footer-left">
+          <p>PolyForm Noncommercial License 1.0.0</p>
+          <p>Join the <a href="#">Civic Tech DC</a> community to get involved</p>
+        </div>
+        
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/cibmangotree/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="mailto:cibmangotree@proton.me">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email">
+            </a>
+        </div>
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+	<!-- Script to give nav links alternate styling on mobile -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const navbar = document.getElementById('navbarNav');
+			navbar.addEventListener('show.bs.collapse', function () {
+			navbar.classList.add('collapsed');
+			});
+			navbar.addEventListener('hide.bs.collapse', function () {
+			navbar.classList.remove('collapsed');
+			});
+		});
+		</script> 
+
    </body>
    <style>
 	/* Card Styling */
