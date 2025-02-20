@@ -13,9 +13,7 @@
 /* Background image on desktop */
 @media (min-width: 768px) {
     .page-container {
-        background-image: url("../images/mango-tree.PNG");
-        background-repeat: no-repeat;
-        background-position: 50% -5%;
+        background-position: 50% -5rem;
         background-size: 90vw;
     }
 }
@@ -54,6 +52,16 @@
 .nav-link.active {
     background-color: #609949;
     color: #ffffff !important;
+}
+
+/* Styling for nav links on mobile */
+.collapse.collapsed .nav-link {
+    font-size: 1em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.collapse.collapsed .nav-link:last-child {
+    margin-bottom: 0;
 }
 
 .transparent-card {
