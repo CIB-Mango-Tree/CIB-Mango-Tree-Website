@@ -76,22 +76,26 @@
       <!-- Navbar -->
       <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light pb-4">
         <!-- Navbar Logo -->
-        <a class="navbar-brand d-flex flex-row align-items-center mx-auto mx-md-0 ps-md-4 ps-4" href="index.html">
+        <a class="navbar-brand d-flex flex-row align-items-center ps-md-4 ps-4" href="index.html">
           <img class="header-logo" src="docs/images/mango-text.PNG">
           <div class="d-flex flex-column ps-3 ps-md-2">
             <p class="header-text mb-0">CIB Mango Tree</p>
             <p class="header-subtitle mb-0">A Civic Tech DC Project</p>
           </div>
         </a>
+        <!-- Navbar Toggler -->
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>   
         <!-- Navbar Links -->
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav w-100 pe-4 ps-4 justify-content-between">
-            <a class="nav-item nav-link col-2" href="index.html">About</a>
-            <a class="nav-item nav-link active col-2" href="download-and-install.html">Download & Install</a>
-            <a class="nav-item nav-link col-2" href="data-preparation.html">Data Preparation</a>
-            <a class="nav-item nav-link col-2" href="tests.html">Test Library</a>
+            <a class="nav-item nav-link col-6 col-md-2" href="index.html">About</a>
+            <a class="nav-item nav-link col-6 col-md-2 active" href="download-and-install.html">Download & Install</a>
+            <a class="nav-item nav-link col-6 col-md-2" href="data-preparation.html">Data Preparation</a>
+            <a class="nav-item nav-link col-6 col-md-2" href="tests.html">Test Library</a>
             <!-- Add news link once page is set up -->
-            <a class="nav-item nav-link col-2">News</a>
+            <a class="nav-item nav-link col-6 col-md-2">News</a>
           </div>
         </div>
       </nav>
@@ -200,5 +204,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <!-- Script to give nav links alternate styling on mobile -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const navbar = document.getElementById('navbarNav');
+        navbar.addEventListener('show.bs.collapse', function () {
+          navbar.classList.add('collapsed');
+        });
+        navbar.addEventListener('hide.bs.collapse', function () {
+          navbar.classList.remove('collapsed');
+        });
+      });
+    </script> 
+
   </body>
 </html>
