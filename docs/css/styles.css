@@ -32,12 +32,7 @@
     font-size: 0.6em;
 }
 
-/* lighter: #4c9b3c
-darker: #00873f */
-
-
 .nav-link {
-    border: 2px solid #9cbf8d;
     border-radius: 8px;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
@@ -51,6 +46,7 @@ darker: #00873f */
 
 .nav-link:hover {
     background-color: #9cbf8d;
+    border: 2px solid #9cbf8d;
     color: #ffffff;
 }
 
@@ -82,7 +78,6 @@ darker: #00873f */
     border: none;
     padding: 1rem;
     width: 12rem;
-    max-width: 100%;
 }
 
 .download-mango-icon {
