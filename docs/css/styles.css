@@ -32,8 +32,12 @@
     font-size: 0.6em;
 }
 
+/* lighter: #4c9b3c
+darker: #00873f */
+
+
 .nav-link {
-    border: 2px solid #609949;
+    border: 2px solid #9cbf8d;
     border-radius: 8px;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
@@ -46,12 +50,14 @@
 }
 
 .nav-link:hover {
-    background-color: #a4cf4c;
+    background-color: #9cbf8d;
+    color: #ffffff;
 }
 
 .nav-link.active {
     background-color: #609949;
     color: #ffffff !important;
+    border: 2px solid #609949;
 }
 
 /* Styling for nav links on mobile */
@@ -75,8 +81,6 @@
     border-radius: 20px;
     border: none;
     padding: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
     width: 12rem;
     max-width: 100%;
 }
