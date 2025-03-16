@@ -1,238 +1,263 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CIB Mango Tree</title>
-    <link rel="icon" type="image/png" href="docs/images/favicon.PNG">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="./docs/css/styles.css" rel="stylesheet"/>
-    <script src="./docs/js/testDetailsTemplate.js" defer></script>
-    <style>
-      .nav.flex-column {
-          align-self: start; 
-          position: relative; 
-          z-index: 1000;
-          background-color: white; /* Ensures it's visible */
-        }
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIB Mango Tree</title>
+  <link rel="icon" type="image/png" href="docs/images/favicon.PNG">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="./docs/css/styles.css" rel="stylesheet" />
+  <script src="./docs/js/testDetailsTemplate.js" defer></script>
+  <style>
+    .nav.flex-column {
+      align-self: start;
+      position: relative;
+      z-index: 1000;
+      background-color: white;
+      /* Ensures it's visible */
+    }
+
+    .footer {
+      background-color: #6a9f5a;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100vw;
+      margin-top: auto;
+      /* Ensures footer stays at the bottom */
+    }
+
+    .screenshot {
+      height: 50%;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 768px) {
       .footer {
-          background-color: #6a9f5a;
-          color: white;
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          width: 100vw;
-          margin-top: auto; /* Ensures footer stays at the bottom */
-      }
-      .footer a {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px 40px;
       }
 
-      .footer a:hover {
-          text-decoration: underline;
-      }
-      .footer-icons {
-          display: flex;
-          gap: 15px;
-          margin-top: 10px;
-          justify-content: center;
+      .footer-left {
+        text-align: left;
       }
 
-      .footer-icons a {
-          display: flex;
-          align-items: center;
-          gap: 5px;
+      .footer-right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
       }
 
       .footer-icons img {
-          width: 24px;
-          height: 24px;
+        width: 45px;
+        height: 45px;
       }
-      @media (min-width: 768px) {
-          .footer {
-              flex-direction: row;
-              justify-content: space-between;
-              text-align: left;
-              padding: 20px 40px;
-          }
+    }
+  </style>
 
-          .footer-left {
-              text-align: left;
-          }
+</head>
 
-          .footer-right {
-              display: flex;
-              gap: 20px;
-              align-items: center;
-          }
-
-          .footer-icons img {
-            width: 45px;
-            height: 45px;
-          }          
-      }
-
-    </style>
-    
-  </head>
-
-  <body>
-    <div class="page-container">
-      <div class="content">
-        <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light pb-4">
-          <!-- Navbar Logo -->
-          <a class="navbar-brand d-flex flex-row align-items-center ps-md-4 ps-4" href="index.html">
-            <img class="header-logo" src="docs/images/mango-text.PNG">
-            <div class="d-flex flex-column ps-3 ps-md-2">
-              <p class="header-text mb-0">CIB Mango Tree</p>
-              <p class="header-subtitle mb-0">A Civic Tech DC Project</p>
-            </div>
-          </a>
-          <!-- Navbar Toggler -->
-          <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>   
-          <!-- Navbar Links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav w-100 pe-4 ps-4 justify-content-between">
-              <a class="nav-item nav-link col-6 col-md-2 active" href="index.html">About</a>
-              <a class="nav-item nav-link col-6 col-md-2" href="download-and-install.html">Download & Install</a>
-              <a class="nav-item nav-link col-6 col-md-2" href="data-preparation.html">Data Preparation</a>
-              <a class="nav-item nav-link col-6 col-md-2" href="tests.html">Test Library</a>
-              <!-- Add news link once page is set up -->
-              <a class="nav-item nav-link col-6 col-md-2" href="news.html">News</a>
-            </div>
+<body>
+  <div class="page-container">
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light pb-4">
+        <!-- Navbar Logo -->
+        <a class="navbar-brand d-flex flex-row align-items-center ps-md-4 ps-4" href="index.html">
+          <img class="header-logo" src="docs/images/mango-text.PNG">
+          <div class="d-flex flex-column ps-3 ps-md-2">
+            <p class="header-text mb-0">CIB Mango Tree</p>
+            <p class="header-subtitle mb-0">A Civic Tech DC Project</p>
           </div>
-        </nav>
+        </a>
+        <!-- Navbar Toggler -->
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav w-100 pe-4 ps-4 justify-content-between">
+            <a class="nav-item nav-link col-6 col-md-2 active" href="index.html">About</a>
+            <a class="nav-item nav-link col-6 col-md-2" href="download-and-install.html">Download & Install</a>
+            <a class="nav-item nav-link col-6 col-md-2" href="data-preparation.html">Data Preparation</a>
+            <a class="nav-item nav-link col-6 col-md-2" href="tests.html">Test Library</a>
+            <!-- Add news link once page is set up -->
+            <a class="nav-item nav-link col-6 col-md-2" href="news.html">News</a>
+          </div>
+        </div>
+      </nav>
 
 
-        <!-- Main Content Section -->
-        <div class="row p-5 homepage-hero">
-          <div class="d-flex justify-content-center">
-            <div class="col-12 col-md-9 mb-5">
-              <div class="card card-body transparent-card">
-                <div class="display-3">About</div>
-                <br>
-                <span class="lead mb-2">  
-                  Welcome to the CIB Mango Tree, a collaborative and open-source software tool to detect
-                  <a href="https://about.fb.com/news/2018/12/inside-feed-coordinated-inauthentic-behavior/" target="_blank" rel="noopener noreferrer">coordinated inauthentic 
-                  behavior</a> (CIB) in online activity datasets. 
-                  <br><br> A project of <a href="https://www.civictechdc.org/" target="_blank" rel="noopener noreferrer">Civic Tech DC</a>, our mission is to share methods that 
-                  help uncover how disruptive actors attempt to manipulate legitimate online discourse about health, politics, and society.
-                </span>
-                <hr>
-                <h3>What is Coordinated Inauthentic Behavior?</h3>
-                <p>
-                  Coordinated Inauthentic Behavior (CIB) is the organized use of fake or misleading accounts, content, or activity to 
-                  manipulate public opinion, disrupt online discourse, or spread disinformation. Often used by state or non-state actors, 
-                  CIB undermines the integrity of online platforms by distorting legitimate discussions around critical issues like health, 
-                  politics, and societal events.
-                </p>
-                <h3>How It Works:</h3>
-                <p>
-                  The CIB Mango Tree provides an interactive command line interface that houses various tests for signs of 
-                  coordinated inauthentic behavior. Our programs do not scrape data but analyze existing datasets of social media behavior 
-                  that you provide. The tool looks for signs of CIB by analyzing parameters such as post content, username, and timestamp, 
-                  based on behaviors common to CIB campaigns. By running our tests, you can uncover abnormal online activity and understand 
-                  the strategies used by disruptive actors.
-                </p>
-                <h3>Who Can Use It?</h3>
-                <p>
-                  This tool is ideal for researchers, journalists, civil society organizations, and digital analysts who must detect CIB 
-                  in their datasets. Whether focused on monitoring disinformation campaigns or protecting online discourse, our tool 
-                  provides structured, adaptable testing methods to help you achieve your goals!
-                </p>
+      <!-- Main Content Section -->
+      <div class="row p-5 homepage-hero">
+        <div class="d-flex justify-content-center">
+          <div class="col-12 col-md-9 mb-5">
+            <div class="card card-body transparent-card">
+              <div class="display-3 fw-semibold">About</div>
+              <br>
+              <span class="mb-2">
+                Welcome to the CIB Mango Tree, a collaborative and open-source project to develop software that tests
+                for <a href="https://about.fb.com/news/2018/12/inside-feed-coordinated-inauthentic-behavior/"
+                  target="_blank" rel="noopener noreferrer">coordinated inauthentic
+                  behavior</a> (CIB) in datasets of online activity.
+              </span>
+              <img class="screenshot" src="./docs/images/cli-welcome-screenshot.png" />
+              <span>
+                A project of <a href="https://www.civictechdc.org/" target="_blank" rel="noopener noreferrer">Civic Tech
+                  DC</a>, our mission is to share methods to uncover how disruptive actors seek to
+                hack our legitimate online discourse regarding health, politics, and society. The CIB Mango Tree
+                presents the most simple tests for CIB first – the low-hanging fruit. These tests are easy to run and
+                interpret. They will reveal signs of unsophisticated CIB. As you move up the Mango Tree, tests become
+                harder and will scavenge for higher-hanging fruit.
+              </span>
+              <hr>
+              <h3 class="fw-semibold">What is Coordinated Inauthentic Behavior?</h3>
+              <p>
+                Coordinated Inauthentic Behavior (CIB) is the organized use of fake or misleading accounts, content, or
+                activity to
+                manipulate public opinion, disrupt online discourse, or spread disinformation. Often used by state or
+                non-state actors,
+                CIB undermines the integrity of online platforms by distorting legitimate discussions around critical
+                issues like health,
+                politics, and societal events.
+              </p>
+              <img class="screenshot" src="./docs/images/cli-menu-screenshot.png" />
+              <h3 class="fw-semibold">How It Works:</h3>
+              <p>
+                The CIB Mango Tree provides an interactive command line interface that houses various tests for signs of
+                coordinated inauthentic behavior. Our programs do not scrape data but analyze existing datasets of
+                social media behavior
+                that you provide. The tool looks for signs of CIB by analyzing parameters such as post content,
+                username, and timestamp,
+                based on behaviors common to CIB campaigns. By running our tests, you can uncover abnormal online
+                activity and understand
+                the strategies used by disruptive actors.
+              </p>
+              <h3 class="fw-semibold">Who's It For?</h3>
+              <p>
+                This tool is ideal for researchers, journalists, civil society organizations, and digital analysts who
+                must detect CIB
+                in their datasets. Whether focused on monitoring disinformation campaigns or protecting online
+                discourse, our tool
+                provides structured, adaptable testing methods to help you achieve your goals!
+              </p>
 
-                <h3>Inspiration:</h3>
-                <div class="row d-flex flex-column-reverse flex-md-row"> 
-                  <div class="col-12 col-md-6">
-                    <p>
-                      This project is inspired by Taiwan’s vibrant civil society (and one of its best fruits). 
-                      The project aims to emulate the Taiwanese people’s drive for open online expression, free of manipulation. 
-                      Online discourse can sometimes be colorful, but it should also be natural and healthy, like a mango.
-                    </p>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <img src="html_output/images/mangos-on-a-table.jpg" alt="Mangoes on a table" class="img-fluid rounded" style="border: 5px solid #007bff; border-radius: 5px;">
-                  </div>
-                </div>
-
-                <div class="row mt-4">
-                  <!-- Keywords Section -->
-                  <div class="col-md-6">
-                    <div class="accordion" id="accordionKeywords">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingKeywords">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKeywords" aria-expanded="true" aria-controls="collapseKeywords">
-                            Keywords
-                          </button>
-                        </h2>
-                        <div id="collapseKeywords" class="accordion-collapse collapse" aria-labelledby="headingKeywords" data-bs-parent="#accordionKeywords">
-                          <div class="accordion-body">
-                            <ul>
-                              <li class="list-item"><strong>Coordinated Inauthentic Behavior:</strong> Organized, malicious efforts to manipulate public opinion online through fake accounts or disinformation.</li>
-                              <li class="list-item"><strong>Civic Tech:</strong> The use of technology to improve the relationship between citizens and their government.</li>
-                              <li class="list-item"><strong>Scraping:</strong>The automated process of extracting data from websites. This can be done using custom-built programs or tools, often called "scrapers."</li>
-                              <li class="list-item"><strong>APIs (Application Programming Interfaces):</strong> Tools that allow different software programs to communicate with each other, often used to access data from social media platforms.</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Tools Section -->
-                  <div class="col-md-6 mb-4">
-                    <div class="accordion" id="accordionTools">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTools">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTools" aria-expanded="false" aria-controls="collapseTools">
-                            Tools You Will Use
-                          </button>
-                        </h2>
-                        <div id="collapseTools" class="accordion-collapse collapse" aria-labelledby="headingTools" data-bs-parent="#accordionTools">
-                          <div class="accordion-body">
-                            <ul>
-                              <li class="list-item"><strong>Python:</strong> A programming language that will help with sorting through your databases</li>
-                              <li class="list-item"><strong>Github:</strong> A community platform that allows developers to manage and share their code with others</li>
-                              <li class="list-item"><strong>Command Line Interface:</strong> A text-based interface on your computer that will allow you to look at your databases</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
+              <h3 class="fw-semibold">Inspiration:</h3>
+              <div class="row d-flex flex-column-reverse flex-md-row">
                 <div class="col-12">
-                  <div class="accordion" id="accordionGlossary">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingGlossary">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGlossary" aria-expanded="false" aria-controls="collapseGlossary">
-                          Learn More about Coordinated Inauthentic Behavior
+                  <p>
+                    This project is inspired by Taiwan's vibrant civil society (and one of its best fruits).
+                    The project aims to emulate the Taiwanese people's drive for open online expression, free of
+                    manipulation.
+                    Online discourse can sometimes be colorful, but it should also be natural and healthy, like a mango.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <!-- Keywords Section -->
+                <div class="col-md-6">
+                  <div class="accordion" id="accordionKeywords">
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingKeywords">
+                        <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseKeywords" aria-expanded="true" aria-controls="collapseKeywords">
+                          Keywords
                         </button>
                       </h2>
-                      <div id="collapseGlossary" class="accordion-collapse collapse" aria-labelledby="headingGlossary" data-bs-parent="#accordionGlossary">
-                        <div class="accordion-body">
+                      <div id="collapseKeywords" class="accordion-collapse collapse" aria-labelledby="headingKeywords"
+                        data-bs-parent="#accordionKeywords">
+                        <div class="accordion-body bg-light">
                           <ul>
-                            <li class="list-item"><strong>Meta: </strong>
-                              <a href="https://about.fb.com/news/2018/12/inside-feed-coordinated-inauthentic-behavior/" target="_blank" rel="noopener noreferrer">
-                                Coordinated Inauthentic Behavior Explained</a></li>
-                            <li class="list-item"><strong>Stanford University:</strong>
-                              <a href="https://cyber.fsi.stanford.edu/news/how-coordinated-inauthentic-behavior-continues-social-platforms" target="_blank" rel="noopener noreferrer">
-                                How Coordinated Inauthentic Behavior continues on Social Platforms</a></li>
-                            <li class="list-item"><strong>Atlantic Council:</strong>
-                              <a href="https://www.atlanticcouncil.org/programs/digital-forensic-research-lab/" target="_blank" rel="noopener noreferrer">
-                                The Digital Forensic Research Lab</a></li>
-                            <li class="list-item"><strong>The Global Disinformation Index:</strong>
-                              <a href="https://www.disinformationindex.org/" target="_blank" rel="noopener noreferrer">
-                                Research and Reports</a></li>
+                            <li class="list-item"><strong>Coordinated Inauthentic Behavior:</strong> Organized,
+                              malicious efforts to manipulate public opinion online through fake accounts or
+                              disinformation.</li>
+                            <li class="list-item"><strong>Civic Tech:</strong> The use of technology to improve the
+                              relationship between citizens and their government.</li>
+                            <li class="list-item"><strong>Scraping:</strong>The automated process of extracting data
+                              from websites. This can be done using custom-built programs or tools, often called
+                              "scrapers."</li>
+                            <li class="list-item"><strong>APIs (Application Programming Interfaces):</strong> Tools that
+                              allow different software programs to communicate with each other, often used to access
+                              data from social media platforms.</li>
                           </ul>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tools Section -->
+                <div class="col-md-6 mb-4">
+                  <div class="accordion" id="accordionTools">
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingTools">
+                        <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTools" aria-expanded="false" aria-controls="collapseTools">
+                          Tools You Will Use
+                        </button>
+                      </h2>
+                      <div id="collapseTools" class="accordion-collapse collapse" aria-labelledby="headingTools"
+                        data-bs-parent="#accordionTools">
+                        <div class="accordion-body bg-light">
+                          <ul>
+                            <li class="list-item"><strong>Python:</strong> A programming language that will help with
+                              sorting through your databases</li>
+                            <li class="list-item"><strong>Github:</strong> A community platform that allows developers
+                              to manage and share their code with others</li>
+                            <li class="list-item"><strong>Command Line Interface:</strong> A text-based interface on
+                              your computer that will allow you to look at your databases</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="accordion" id="accordionGlossary">
+                  <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingGlossary">
+                      <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseGlossary" aria-expanded="false" aria-controls="collapseGlossary">
+                        Learn More about Coordinated Inauthentic Behavior
+                      </button>
+                    </h2>
+                    <div id="collapseGlossary" class="accordion-collapse collapse" aria-labelledby="headingGlossary"
+                      data-bs-parent="#accordionGlossary">
+                      <div class="accordion-body bg-light">
+                        <ul>
+                          <li class="list-item"><strong>Meta: </strong>
+                            <a href="https://about.fb.com/news/2018/12/inside-feed-coordinated-inauthentic-behavior/"
+                              target="_blank" rel="noopener noreferrer">
+                              Coordinated Inauthentic Behavior Explained</a>
+                          </li>
+                          <li class="list-item"><strong>Stanford University:</strong>
+                            <a href="https://cyber.fsi.stanford.edu/news/how-coordinated-inauthentic-behavior-continues-social-platforms"
+                              target="_blank" rel="noopener noreferrer">
+                              How Coordinated Inauthentic Behavior continues on Social Platforms</a>
+                          </li>
+                          <li class="list-item"><strong>Atlantic Council:</strong>
+                            <a href="https://www.atlanticcouncil.org/programs/digital-forensic-research-lab/"
+                              target="_blank" rel="noopener noreferrer">
+                              The Digital Forensic Research Lab</a>
+                          </li>
+                          <li class="list-item"><strong>The Global Disinformation Index:</strong>
+                            <a href="https://www.disinformationindex.org/" target="_blank" rel="noopener noreferrer">
+                              Research and Reports</a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -241,38 +266,47 @@
             </div>
           </div>
         </div>
-        <footer class="footer">
-          <div class="footer-left">
-            <p>PolyForm Noncommercial License 1.0.0</p>
-            <p>Join the <a href="https://www.civictechdc.org/" target="_blank" rel="noopener noreferrer">Civic Tech DC</a> community to get involved</p>
-          </div>
-          
-          <div class="footer-icons">
-              <a href="https://www.instagram.com/cibmangotree/" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-              </a>
-              <a href="mailto:cibmangotree@proton.me">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email">
-              </a>
-          </div>
-        </footer>
       </div>
-    </div>
+      <footer class="footer">
+        <div class="footer-left">
+          <p>PolyForm Noncommercial License 1.0.0</p>
+          <p>Join the <a href="https://www.civictechdc.org/" class="text-white" target="_blank" rel="noopener noreferrer">Civic Tech DC</a>
+            community to get involved</p>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <!-- Script to give nav links alternate styling on mobile -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.getElementById('navbarNav');
-        navbar.addEventListener('show.bs.collapse', function () {
-          navbar.classList.add('collapsed');
-        });
-        navbar.addEventListener('hide.bs.collapse', function () {
-          navbar.classList.remove('collapsed');
-        });
+        <div class="d-flex flex-column">
+          <div class="d-flex gap-3 align-items-center">
+            <i class="bi bi-envelope fw-bold"></i>
+            <a href="mailto:cibmangotree@proton.me" class="text-white">cibmangotree@proton.me </a>
+          </div>
+
+          <div class="d-flex gap-3">
+            <i class="bi bi-instagram"></i>
+            <a href="https://www.instagram.com/cibmangotree/" class="text-white" target="_blank" >instagram.com/cibmangotree</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <!-- Script to give nav links alternate styling on mobile -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbar = document.getElementById('navbarNav');
+      navbar.addEventListener('show.bs.collapse', function () {
+        navbar.classList.add('collapsed');
       });
-    </script> 
+      navbar.addEventListener('hide.bs.collapse', function () {
+        navbar.classList.remove('collapsed');
+      });
+    });
+  </script>
 
 
 </body>
