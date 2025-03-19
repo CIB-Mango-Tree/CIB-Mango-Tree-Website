@@ -1,264 +1,278 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test Library</title>
-    <link rel="icon" type="image/png" href="docs/images/favicon.PNG">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="./docs/css/styles.css" rel="stylesheet"/>
-    <script src="./docs/js/testSummaryTemplate.js"></script>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test Library</title>
+	<link rel="icon" type="image/png" href="docs/images/favicon.PNG">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="./docs/css/styles.css" rel="stylesheet" />
+	<script src="./docs/js/testSummaryTemplate.js"></script>
 	<style>
 		/* Ensure images resize properly without squeezing */
 		.img-fluid {
-		  max-width: 100%;
-		  height: auto;
+			max-width: 100%;
+			height: auto;
 		}
+
 		.footer {
-          background-color: #6a9f5a;
-          color: white;
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          width: 100vw;
-          margin-top: auto; /* Ensures footer stays at the bottom */
-      }
-      .footer a {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-      }
+			background-color: #6a9f5a;
+			color: white;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			width: 100vw;
+			margin-top: auto;
+			/* Ensures footer stays at the bottom */
+		}
 
-      .footer a:hover {
-          text-decoration: underline;
-      }
-      .footer-icons {
-          display: flex;
-          gap: 15px;
-          margin-top: 10px;
-          justify-content: center;
-      }
+		.footer a {
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
 
-      .footer-icons a {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-      }
+		.footer a:hover {
+			text-decoration: underline;
+		}
 
-      .footer-icons img {
-          width: 24px;
-          height: 24px;
-      }
-      @media (min-width: 768px) {
-          .footer {
-              flex-direction: row;
-              justify-content: space-between;
-              text-align: left;
-              padding: 20px 40px;
-          }
+		.footer-icons {
+			display: flex;
+			gap: 15px;
+			margin-top: 10px;
+			justify-content: center;
+		}
 
-          .footer-left {
-              text-align: left;
-          }
+		.footer-icons a {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
 
-          .footer-right {
-              display: flex;
-              gap: 20px;
-              align-items: center;
-          }
+		.footer-icons img {
+			width: 24px;
+			height: 24px;
+		}
 
-		  .footer-icons img {
-            width: 45px;
-            height: 45px;
-          }          
-      }  
-	  </style>
-	</head>
+		@media (min-width: 768px) {
+			.footer {
+				flex-direction: row;
+				justify-content: space-between;
+				text-align: left;
+				padding: 20px 40px;
+			}
 
-	<body>
-		<div class="page-container">
+			.footer-left {
+				text-align: left;
+			}
+
+			.footer-right {
+				display: flex;
+				gap: 20px;
+				align-items: center;
+			}
+
+			.footer-icons img {
+				width: 45px;
+				height: 45px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page-container">
 		<!-- Navbar -->
 		<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light pb-4">
 			<!-- Navbar Logo -->
 			<a class="navbar-brand d-flex flex-row align-items-center ps-md-4 ps-4" href="index.html">
 				<img class="header-logo" src="docs/images/mango-text.PNG">
 				<div class="d-flex flex-column ps-3 ps-md-2">
-				<p class="header-text mb-0">CIB Mango Tree</p>
-				<p class="header-subtitle mb-0">A Civic Tech DC Project</p>
+					<p class="header-text mb-0">CIB Mango Tree</p>
+					<p class="header-subtitle mb-0">A Civic Tech DC Project</p>
 				</div>
 			</a>
 			<!-- Navbar Toggler -->
-			<button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>   
+			</button>
 			<!-- Navbar Links -->
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<div class="navbar-nav w-100 pe-4 ps-4 justify-content-between">
-				<a class="nav-item nav-link col-6 col-md-2" href="index.html">About</a>
-				<a class="nav-item nav-link col-6 col-md-2" href="download-and-install.html">Download & Install</a>
-				<a class="nav-item nav-link col-6 col-md-2" href="data-preparation.html">Data Preparation</a>
-				<a class="nav-item nav-link col-6 col-md-2 active" href="tests.html">Test Library</a>
-				<a class="nav-item nav-link col-6 col-md-2" href="news.html">News</a>
+					<a class="nav-item nav-link col-6 col-md-2" href="index.html">About</a>
+					<a class="nav-item nav-link col-6 col-md-2" href="download-and-install.html">Download & Install</a>
+					<a class="nav-item nav-link col-6 col-md-2" href="data-preparation.html">Data Preparation</a>
+					<a class="nav-item nav-link col-6 col-md-2 active" href="tests.html">Test Library</a>
+					<a class="nav-item nav-link col-6 col-md-2" href="news.html">News</a>
 				</div>
 			</div>
-		</nav>	
-		  <!-- Main Content Section -->
-		  <div class="row p-5 homepage-hero">
+		</nav>
+		<!-- Main Content Section -->
+		<div class="row p-5 homepage-hero">
 			<div class="d-flex justify-content-center">
 
 
 				<div class="col-9 mb-5">
 					<div class="card card-body transparent-card">
-					<h1 class="display-3">Test Library</h1>
-					<div class="row row-cols-1 g-4">
-						<template id="test-summary-template">
-							<style>
-						
-  /* General Styling */
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
+						<h1 class="display-3">Test Library</h1>
+						<div class="row row-cols-1 g-4 border border-2 mt-2 ms-2 me-2 rounded-2">
+							<template id="test-summary-template">
+								<style>
+									/* General Styling */
+									.img-fluid {
+										max-width: 100%;
+										height: auto;
+									}
 
-  /* Test Summary Card */
-  .test-summary {
-    display: flex;
-    flex-direction: row;
-    column-gap: 15px;
-    align-items: flex-start;
-  }
+									/* Test Summary Card */
+									.test-summary {
+										display: flex;
+										flex-direction: row;
+										column-gap: 15px;
+										align-items: flex-start;
+									}
 
-  .test-summary img {
-    width: 130px;
-    height: auto;
-  }
+									.test-summary img {
+										width: 130px;
+										height: auto;
+									}
 
-  .test-description {
-    flex: 1;
-  }
+									.test-description {
+										flex: 1;
+									}
 
-  .req-fields-label {
-    margin-top: 15px;
-    font-weight: bold;
-  }
+									.req-fields-label {
+										margin-top: 15px;
+										font-weight: bold;
+									}
 
-  .reqs-boxes {
-    background-color: #f0f0f0;
-    padding: 8px;
-    border-radius: 5px;
-    margin-right: 5px;
-    text-align: center;
-    font-size: 0.85rem;
-    display: inline-block;
-    margin-bottom: 5px;
-  }
+									.reqs-boxes {
+										background-color: #f0f0f0;
+										padding: 8px;
+										border-radius: 5px;
+										margin-right: 5px;
+										text-align: center;
+										font-size: 0.85rem;
+										display: inline-block;
+										margin-bottom: 5px;
+									}
 
-  .test-details-btn {
-    margin-top: 15px;
-  }
+									.test-details-btn {
+										margin-top: 15px;
+									}
 
-  /* Mobile Styling */
-  @media (max-width: 768px) {
-    .test-summary {
-      flex-direction: column; /* Stack content vertically */
-      align-items: center;
-      text-align: center;
-    }
+									/* Mobile Styling */
+									@media (max-width: 768px) {
+										.test-summary {
+											flex-direction: column;
+											/* Stack content vertically */
+											align-items: center;
+											text-align: center;
+										}
 
-    .test-summary img {
-      margin-bottom: 15px; /* Add spacing between the image and text */
-    }
+										.test-summary img {
+											margin-bottom: 15px;
+											/* Add spacing between the image and text */
+										}
 
-    .test-description {
-      text-align: left; /* Keep text aligned to the left */
-      width: 100%;
-    }
+										.test-description {
+											text-align: left;
+											/* Keep text aligned to the left */
+											width: 100%;
+										}
 
-    .req-fields-label,
-    .reqs-boxes {
-      text-align: center; /* Center-align required fields on mobile */
-      display: block; /* Stack the required fields */
-    }
+										.req-fields-label,
+										.reqs-boxes {
+											text-align: center;
+											/* Center-align required fields on mobile */
+											display: block;
+											/* Stack the required fields */
+										}
 
-    .reqs-boxes {
-      margin: 5px 0; /* Add vertical spacing between boxes */
-    }
-  }
+										.reqs-boxes {
+											margin: 5px 0;
+											/* Add vertical spacing between boxes */
+										}
+									}
 
-						@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
-						@import url("./docs/css/styles.css");
+									@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+									@import url("./docs/css/styles.css");
 
-						.test-summary {
-							display: flex;
-							column-gap: 10px;
-						}
+									.test-summary {
+										display: flex;
+										column-gap: 10px;
+									}
 
-						.test-summary img {
-							width: 130px
-						}
+									.test-summary img {
+										width: 130px
+									}
 
-						.test-description {
-							flex: 1 1 auto;
-						}
+									.test-description {
+										flex: 1 1 auto;
+									}
 
-						slot[name=req-fields]::slotted(*){
-							display: flex;
-							flex-wrap: wrap;
-						}
+									slot[name=req-fields]::slotted(*) {
+										display: flex;
+										flex-wrap: wrap;
+									}
 
-						.req-fields-label {
-							margin-top: 20px;
-						}
+									.req-fields-label {
+										margin-top: 20px;
+									}
 
-						.test-details-btn {
-							flex: 0 0 auto;
-							height: fit-content;
-						}
+									.test-details-btn {
+										flex: 0 0 auto;
+										height: fit-content;
+									}
 
-						slot[name=test-details-link]::slotted(*){
-							padding-left: 20px !important;
-							padding-right: 20px !important;
-							text-decoration: none !important;
-						}
-					</style>
-					<div class="col">
-					  <div class="card">
-						<div class="card-body">
-						  <div class="card-title fw-semibold">
-							<slot name="test-name"></slot>
-						  </div>
-						  <div class="test-summary">
-							<div class="test-icon">
-								<img src="./docs/images/low-hanging-circle.png">
-							</div>
-							<div class="test-description"> 
-								<slot name="test-description"></slot>											
-								<div class="req-fields-label"><em>Required Fields:</em></div> 	
-								<slot name="req-fields">None</slot>
-							  </div>
-							  <div class="test-details-btn">
-								<slot name="test-details-link"></slot>
-							  </div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </template>
-				<test-summary>
-			          <span slot="test-name">Copypasta</span>
-				  <span slot="test-description">A test to examine for identical strings of text repeated across posts, AKA “copypasta.”</span>
-				  <div slot="req-fields">
-					<div class="reqs-boxes">Unique Post Username</div>
-					<div class="reqs-boxes">Unique Post Number</div>
-					<div class="reqs-boxes">Post Content</div>
-				  </div>
-				  <a slot="test-details-link" class="btn btn-primary" href="copypasta.html">
-					  See Test					  
-				  </a>
-				</test-summary>
-				<!-- <test-summary>
+									slot[name=test-details-link]::slotted(*) {
+										padding-left: 20px !important;
+										padding-right: 20px !important;
+										text-decoration: none !important;
+									}
+								</style>
+								<div class="col">
+									<div class="card">
+										<div class="card-body">
+											<div class="card-title fw-semibold">
+												<slot name="test-name"></slot>
+											</div>
+											<div class="test-summary">
+												<div class="test-icon">
+													<img src="./docs/images/low-hanging-circle.png">
+												</div>
+												<div class="test-description">
+													<slot name="test-description"></slot>
+													<div class="req-fields-label"><em>Required Fields:</em></div>
+													<slot name="req-fields">None</slot>
+												</div>
+												<div class="test-details-btn">
+													<slot name="test-details-link"></slot>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</template>
+							<test-summary>
+								<span slot="test-name">Copypasta</span>
+								<span slot="test-description">A test to examine for identical strings of text repeated
+									across posts, AKA “copypasta.”</span>
+								<div slot="req-fields">
+									<div class="reqs-boxes">Unique Post Username</div>
+									<div class="reqs-boxes">Unique Post Number</div>
+									<div class="reqs-boxes">Post Content</div>
+								</div>
+								<a slot="test-details-link" class="btn btn-primary" href="copypasta.html">
+									See Test
+								</a>
+							</test-summary>
+							<!-- <test-summary>
 				      <span slot="test-name">Graphing Post Time</span>
 				      <span slot="test-description">A test that graphs the frequency of all usernames’ posting across a 24 hour chart, allowing you to check for unusual patterns of posting.</span>
 					  <div slot="req-fields">
@@ -271,7 +285,7 @@
 						  See Test					  
 					  </a>
 				</test-summary> -->
-				<!-- <test-summary>
+							<!-- <test-summary>
 				      <span slot="test-name">Post Time Coordination</span>
 				      <span slot="test-description">A test that examines for usernames posting within the same time windows across multiple instances in the dataset, revealing possible coordination.</span>
 					  <div slot="req-fields">
@@ -284,50 +298,58 @@
 						  See Test					  
 					  </a>
 				</test-summary> -->
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-          </div>
-        </div>   
-      </div>
-	  <footer class="footer">
-        <div class="footer-left">
-          <p>PolyForm Noncommercial License 1.0.0</p>
-          <p>Join the <a href="https://www.civictechdc.org/" target="_blank" rel="noopener noreferrer">Civic Tech DC</a> community to get involved</p>
-        </div>
-        
-        <div class="footer-icons">
-            <a href="https://www.instagram.com/cibmangotree/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-            <a href="mailto:cibmangotree@proton.me">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email">
-            </a>
-        </div>
-      </footer>
-    </div>
+		<footer class="footer">
+			<div class="footer-left">
+				<p>PolyForm Noncommercial License 1.0.0</p>
+				<p>Join the <a href="https://www.civictechdc.org/" target="_blank" rel="noopener noreferrer">Civic Tech
+						DC</a> community to get involved</p>
+			</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+			<div class="footer-icons">
+				<a href="https://www.instagram.com/cibmangotree/" target="_blank">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+				</a>
+				<a href="mailto:cibmangotree@proton.me">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email">
+				</a>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+		integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+		crossorigin="anonymous"></script>
 	<!-- Script to give nav links alternate styling on mobile -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const navbar = document.getElementById('navbarNav');
 			navbar.addEventListener('show.bs.collapse', function () {
-			navbar.classList.add('collapsed');
+				navbar.classList.add('collapsed');
 			});
 			navbar.addEventListener('hide.bs.collapse', function () {
-			navbar.classList.remove('collapsed');
+				navbar.classList.remove('collapsed');
 			});
 		});
-		</script> 
+	</script>
 
-   </body>
-   <style>
+</body>
+<style>
 	/* Card Styling */
 	.card {
-		border: 1px solid #ddd; /* Subtle border */
-		border-radius: 8px; /* Rounded corners */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+		border: 1px solid #ddd;
+		/* Subtle border */
+		border-radius: 8px;
+		/* Rounded corners */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		/* Soft shadow */
 		padding: 20px;
 		margin-top: 10px;
 	}
@@ -342,7 +364,8 @@
 	.card-title .badge {
 		margin-left: 10px;
 		font-size: 0.85em;
-		background-color: #6c757d; /* Secondary color */
+		background-color: #6c757d;
+		/* Secondary color */
 		color: white;
 		border-radius: 5px;
 	}
@@ -385,4 +408,5 @@
 		margin-top: 15px;
 	}
 </style>
+
 </html>
