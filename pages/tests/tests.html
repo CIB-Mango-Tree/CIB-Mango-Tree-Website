@@ -81,6 +81,72 @@
 				height: 45px;
 			}
 		}
+		
+		/* Card Styling */
+		.card {
+			border: 1px solid #ddd;
+			/* Subtle border */
+			border-radius: 8px;
+			/* Rounded corners */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			/* Soft shadow */
+			padding: 20px;
+			margin-top: 10px;
+		}
+
+		.card-title {
+			display: flex;
+			align-items: center;
+			font-size: 1.2em;
+			margin-bottom: 15px;
+		}
+
+		.card-title .badge {
+			margin-left: 10px;
+			font-size: 0.85em;
+			background-color: #6c757d;
+			/* Secondary color */
+			color: white;
+			border-radius: 5px;
+		}
+
+		.test.description {
+			margin-bottom: 15px;
+			color: #555;
+			line-height: 1.5;
+			font-size: 0.95em;
+		}
+
+		.req-fields {
+			font-weight: bold;
+			color: #333;
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+
+		/* Needed Parameters Boxes */
+		.box-row {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			margin-bottom: 15px;
+		}
+
+		.reqs-boxes {
+			flex: 1;
+			background-color: #f0f0f0;
+			color: #333;
+			padding: 8px;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 0.9em;
+		}
+
+		/* Button Styling */
+		.btn-primary {
+			width: fit-content;
+			margin-top: 15px;
+		}
 	</style>
 </head>
 
@@ -192,74 +258,5 @@
 			});
 		});
 	</script>
-
 </body>
-<style>
-	/* Card Styling */
-	.card {
-		border: 1px solid #ddd;
-		/* Subtle border */
-		border-radius: 8px;
-		/* Rounded corners */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		/* Soft shadow */
-		padding: 20px;
-		margin-top: 10px;
-	}
-
-	.card-title {
-		display: flex;
-		align-items: center;
-		font-size: 1.2em;
-		margin-bottom: 15px;
-	}
-
-	.card-title .badge {
-		margin-left: 10px;
-		font-size: 0.85em;
-		background-color: #6c757d;
-		/* Secondary color */
-		color: white;
-		border-radius: 5px;
-	}
-
-	.test.description {
-		margin-bottom: 15px;
-		color: #555;
-		line-height: 1.5;
-		font-size: 0.95em;
-	}
-
-	.req-fields {
-		font-weight: bold;
-		color: #333;
-		margin-top: 15px;
-		margin-bottom: 10px;
-	}
-
-	/* Needed Parameters Boxes */
-	.box-row {
-		display: flex;
-		gap: 10px;
-		flex-wrap: wrap;
-		margin-bottom: 15px;
-	}
-
-	.reqs-boxes {
-		flex: 1;
-		background-color: #f0f0f0;
-		color: #333;
-		padding: 8px;
-		border-radius: 5px;
-		text-align: center;
-		font-size: 0.9em;
-	}
-
-	/* Button Styling */
-	.btn-primary {
-		width: fit-content;
-		margin-top: 15px;
-	}
-</style>
-
 </html>
