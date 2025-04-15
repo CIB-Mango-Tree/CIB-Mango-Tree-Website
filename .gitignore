@@ -1,0 +1,30 @@
+# Node modules (if using npm for tooling)
+node_modules/
+
+# Build output
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Environment/config files
+.env
+.env.local
+
+# VSCode settings
+.vscode/
+
+# MacOS resource fork files
+._*
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.sublime-workspace
