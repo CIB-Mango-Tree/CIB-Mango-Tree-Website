@@ -1,0 +1,136 @@
+/* Ensure images resize properly without squeezing */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    background-color: #6a9f5a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    margin-top: auto;
+    /* Ensures footer stays at the bottom */
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.footer-icons a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px 40px;
+    }
+
+    .footer-left {
+        text-align: left;
+    }
+
+    .footer-right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footer-icons img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #ddd;
+    /* Subtle border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.card-title .badge {
+    margin-left: 10px;
+    font-size: 0.85em;
+    background-color: #6c757d;
+    /* Secondary color */
+    color: white;
+    border-radius: 5px;
+}
+
+.test.description {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+.req-fields {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Needed Parameters Boxes */
+.box-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.reqs-boxes {
+    flex: 1;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Button Styling */
+.btn-primary {
+    width: fit-content;
+    margin-top: 15px;
+}
