@@ -3,7 +3,7 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- need to check  -->
+  <!-- TODO: need to check  this  + url ion tst.html navigateing to back doesnt work. link broken. hamburger menu also broken in small screens (need more margin)-->
   <url>
     <loc>https://cibmangotree.org/</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
