@@ -26,7 +26,7 @@ let templateHTML =
 			<div class="row row-cols-1 g-4">
 				<div class="col">
 					<span class="return"><a href="../tests/tests.html">&larr;Return to Test Library</a></span>
-					<img class="fruit-img" src="./docs/images/low-hanging-circle.png" />
+					<img class="fruit-img" src="./assets/images/low-hanging-circle.png" />
 					<div class="body">
 						<span><b>Summary</b></span>
 						<p>
