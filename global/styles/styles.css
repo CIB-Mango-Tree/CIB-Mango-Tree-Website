@@ -1,0 +1,113 @@
+.homepage-hero {
+    min-height:100vh;  
+}
+
+/* Background image on mobile */
+.page-container {
+    background-image: url("../../assets/images/mango-tree.PNG");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: 150vw;
+}
+
+/* Background image on desktop */
+@media (min-width: 768px) {
+    .page-container {
+        background-position: 50% -5rem;
+        background-size: 90vw;
+    }
+}
+
+.header-logo {
+    height: 3.2rem;
+    width: auto;
+}
+
+.header-text {
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.header-subtitle {
+    font-size: 0.6em;
+}
+
+.nav-link {
+    border: 2px solid #9cbf8d;
+    border-radius: 8px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: clamp(0.65em, 1.1vw, 1.5em);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    background-color: #9cbf8d;
+    border: 2px solid #9cbf8d;
+    color: #ffffff;
+}
+
+.nav-link.active {
+    background-color: #609949;
+    color: #ffffff !important;
+    border: 2px solid #609949;
+}
+
+/* Styling for nav links on mobile */
+.collapse.collapsed .nav-link {
+    font-size: 1em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.collapse.collapsed .nav-link:last-child {
+    margin-bottom: 0;
+}
+
+.transparent-card {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    border: none;
+    padding: 1rem;
+    width: 12rem;
+}
+
+.download-mango-icon {
+    width: 3.5rem;
+}
+
+.download-small-icon {
+    width: 2rem;
+}
+
+.box-row {
+    display: flex;
+    display: -ms-flexbox
+}
+
+.req-fields {
+    margin: .1em;
+    margin-top: 1em;
+}
+
+.reqs-boxes {
+    text-align: center;
+    vertical-align: middle;
+    margin: .1em;
+    margin-bottom: 1em;
+    width: 10em;
+    border-width:3px; 
+    border-style:solid; 
+    border-color:#000000; 
+    background-color:#7b7b7ba7; 
+    padding: .1em;
+}

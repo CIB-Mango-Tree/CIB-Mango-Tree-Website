@@ -3,7 +3,6 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
   <url>
     <loc>https://cibmangotree.org/</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
@@ -15,32 +14,52 @@
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cibmangotree.org/download-and-install.html</loc>
+    <loc>https://cibmangotree.org/pages/download-and-install/download-and-install.html</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://cibmangotree.org/data-preparation.html</loc>
+    <loc>https://cibmangotree.org/pages/data-preparation/data-preparation.html</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://cibmangotree.org/tests.html</loc>
+    <loc>https://cibmangotree.org/pages/tests/tests.html</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://cibmangotree.org/news.html</loc>
+    <loc>https://cibmangotree.org/pages/news/news.html</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://cibmangotree.org/copypasta.html</loc>
+    <loc>https://cibmangotree.org/pages/copypasta/copypasta.html</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://cibmangotree.org/comingsoon.html</loc>
+    <loc>https://cibmangotree.org/pages/comingsoon/comingsoon.html</loc>
+    <lastmod>2025-04-03T20:59:21+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cibmangotree.org/pages/test-frequency/test-frequency.html</loc>
+    <lastmod>2025-04-03T20:59:21+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cibmangotree.org/pages/tests_time_coor/tests_time_coor.html</loc>
+    <lastmod>2025-04-03T20:59:21+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cibmangotree.org/pages/post-frequency/post-frequency.html</loc>
+    <lastmod>2025-04-03T20:59:21+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cibmangotree.org/pages/post-time/post-time.html</loc>
     <lastmod>2025-04-03T20:59:21+00:00</lastmod>
     <priority>0.64</priority>
   </url>
